@@ -1,0 +1,10 @@
+/* AGRUME - Entry point */
+
+/* Import full design system */
+@import "css/all.css";
+
+/* Keep global page background flat (no grid / no halo) */
+body::before,
+body::after {
+  display: none;
+}

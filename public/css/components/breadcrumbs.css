@@ -1,0 +1,37 @@
+/* ═══════════════════════════════════════════════════
+   ZEST — Breadcrumbs
+   ═══════════════════════════════════════════════════ */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: var(--text-sm);
+}
+.breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  color: var(--color-text-dim);
+  font-size: var(--text-xs);
+}
+.breadcrumb-link {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+.breadcrumb-link:hover {
+  color: var(--color-primary);
+}
+.breadcrumb-item.active,
+.breadcrumb-item[aria-current="page"] {
+  color: var(--color-text);
+  font-weight: var(--weight-medium);
+}

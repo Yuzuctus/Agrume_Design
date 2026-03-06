@@ -1,0 +1,94 @@
+/* ═══════════════════════════════════════════════════
+   ZEST — Accordion
+   ═══════════════════════════════════════════════════ */
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  border: var(--border-width) solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.accordion-item {
+  border-bottom: var(--border-width) solid var(--color-border-light);
+}
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+.accordion-trigger:hover {
+  background-color: var(--color-surface-hover);
+}
+.accordion-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  color: var(--color-text-muted);
+  transition: transform var(--transition-base);
+}
+.accordion-item.open .accordion-icon,
+details[open] .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  padding: 0 var(--space-lg) var(--space-lg);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  display: none;
+}
+.accordion-item.open .accordion-content {
+  display: block;
+  animation: slideDown 0.2s ease forwards;
+}
+
+details.accordion-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  font-weight: var(--weight-semibold);
+  cursor: pointer;
+  list-style: none;
+}
+details.accordion-item summary::-webkit-details-marker {
+  display: none;
+}
+details.accordion-item summary:hover {
+  background-color: var(--color-surface-hover);
+}
+details.accordion-item[open] .accordion-content {
+  display: block;
+}
+
+.accordion-spaced {
+  border: none;
+  gap: var(--space-sm);
+}
+.accordion-spaced .accordion-item {
+  border: var(--border-width) solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.accordion-spaced .accordion-item:last-child {
+  border-bottom: var(--border-width) solid var(--color-border-light);
+}

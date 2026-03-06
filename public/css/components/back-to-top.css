@@ -1,0 +1,57 @@
+/* ═══════════════════════════════════════════════════
+   ZEST — Back to Top
+   ═══════════════════════════════════════════════════ */
+
+.back-to-top {
+  position: fixed;
+  bottom: var(--space-lg);
+  right: var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: var(--color-on-primary);
+  background-color: var(--color-primary);
+  border: var(--border-thick) solid var(--color-primary);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-btn);
+  cursor: pointer;
+  z-index: var(--z-sticky);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition:
+    opacity var(--transition-base),
+    visibility var(--transition-base),
+    transform var(--transition-base),
+    background-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+}
+.back-to-top.visible,
+.back-to-top[data-visible="true"] {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-btn-hover);
+  transform: translateY(-2px);
+}
+.back-to-top:active {
+  transform: translateY(0);
+}
+@media (max-width: 576px) {
+  .back-to-top {
+    bottom: var(--space-md);
+    right: var(--space-md);
+    width: 40px;
+    height: 40px;
+  }
+}

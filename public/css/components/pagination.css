@@ -1,0 +1,91 @@
+/* ═══════════════════════════════════════════════════
+   ZEST — Pagination
+   ═══════════════════════════════════════════════════ */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  list-style: none;
+  padding: 0;
+  margin: var(--space-xl) 0;
+}
+.pagination-item {
+  display: inline-flex;
+}
+.pagination-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 var(--space-sm);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+  background-color: transparent;
+  border: var(--border-width) solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+.pagination-link:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-alpha-10);
+}
+.pagination-link.active,
+.pagination-link[aria-current="page"] {
+  color: var(--color-on-primary);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  font-weight: var(--weight-semibold);
+}
+.pagination-link:disabled,
+.pagination-link[aria-disabled="true"] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.pagination-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  font-size: var(--text-sm);
+  color: var(--color-text-dim);
+}
+.pagination-compact .pagination-link {
+  border-radius: var(--radius-full);
+}
+
+.pagination-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+.pagination-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-border-light);
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+.pagination-dot.active {
+  background-color: var(--color-primary);
+  transform: scale(1.2);
+}
+.pagination-dot:hover {
+  background-color: var(--color-primary-muted);
+}

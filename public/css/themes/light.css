@@ -1,0 +1,78 @@
+/* ===================================================
+   AGRUME - Light Theme Adjustments
+   =================================================== */
+
+[data-theme="light"] {
+  .card {
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-interactive:hover {
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--color-primary-alpha-25);
+  }
+
+  .card-featured {
+    border-color: var(--color-primary-alpha-35);
+  }
+
+  .hero-blob {
+    opacity: 0.24;
+    filter: blur(80px);
+  }
+
+  .btn-primary:active,
+  .btn-secondary:active {
+    box-shadow: var(--shadow-sm);
+    transform: translateY(1px);
+  }
+
+  .btn-danger {
+    background-color: var(--color-error);
+    border-color: var(--color-error);
+  }
+
+  .btn-danger:hover {
+    background-color: var(--color-pop-hover);
+    border-color: var(--color-pop-hover);
+    filter: none;
+  }
+
+  .table th {
+    background-color: var(--color-bg-alt);
+    color: var(--color-text-muted);
+  }
+
+  .form-input:focus,
+  .form-textarea:focus,
+  .form-select:focus {
+    box-shadow: var(--focus-ring), 0 0 0 4px var(--color-primary-alpha-10);
+  }
+
+  code,
+  pre {
+    background-color: var(--color-bg-alt);
+    border: var(--border-width) solid var(--color-border-light);
+  }
+
+  .badge-solid {
+    box-shadow: 0 2px 8px var(--color-primary-alpha-15);
+  }
+
+  .toast {
+    box-shadow: var(--shadow-card);
+  }
+
+  .feature-item:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .sidebar {
+    background-color: var(--color-bg-alt);
+  }
+
+  .sg-sidebar {
+    background-color: var(--color-bg-alt);
+  }
+}

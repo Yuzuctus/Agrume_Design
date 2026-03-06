@@ -1,0 +1,80 @@
+/* ═══════════════════════════════════════════════════
+   ZEST — Theme Toggle
+   ═══════════════════════════════════════════════════ */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  color: var(--color-text-muted);
+  background-color: transparent;
+  border: var(--border-width) solid var(--color-border-light);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  z-index: var(--z-theme-toggle);
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+.theme-toggle:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-alpha-10);
+  transform: rotate(15deg);
+}
+.theme-toggle:active {
+  transform: rotate(30deg) scale(0.95);
+}
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  transition: transform var(--transition-base);
+}
+
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+  position: absolute;
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-base);
+}
+:root .theme-toggle .icon-sun,
+[data-theme="dark"] .theme-toggle .icon-sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+:root .theme-toggle .icon-moon,
+[data-theme="dark"] .theme-toggle .icon-moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+[data-theme="light"] .theme-toggle .icon-sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+[data-theme="light"] .theme-toggle .icon-moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.theme-toggle-pill {
+  width: auto;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  gap: var(--space-xs);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+}
+.theme-toggle-fixed {
+  position: fixed;
+  top: var(--space-md);
+  right: var(--space-md);
+}
+.navbar ~ .theme-toggle-fixed {
+  top: calc(var(--header-height) + var(--space-md));
+}

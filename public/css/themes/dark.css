@@ -1,0 +1,42 @@
+/* ===================================================
+   AGRUME - Dark Theme Adjustments
+   =================================================== */
+
+:root,
+[data-theme="dark"] {
+  .card {
+    background-color: var(--color-surface);
+  }
+
+  .card-interactive:hover {
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--color-primary-alpha-25);
+  }
+
+  .hero-blob {
+    opacity: 0.72;
+  }
+
+  .table th {
+    background-color: color-mix(
+      in srgb,
+      var(--color-bg-elevated) 84%,
+      var(--color-surface) 16%
+    );
+  }
+
+  .form-input:focus,
+  .form-textarea:focus,
+  .form-select:focus {
+    box-shadow: var(--focus-ring), 0 0 0 4px var(--color-primary-alpha-10);
+  }
+
+  code,
+  pre {
+    background-color: var(--color-bg-elevated);
+  }
+
+  .badge-solid {
+    box-shadow: 0 2px 10px var(--color-primary-alpha-25);
+  }
+}

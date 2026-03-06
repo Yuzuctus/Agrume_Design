@@ -1,0 +1,67 @@
+/* ═══════════════════════════════════════════════════
+   ZEST — Color Swatch (NEW — Style Guide Demo)
+   ═══════════════════════════════════════════════════ */
+
+.color-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-md);
+}
+
+.color-swatch {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: var(--border-width) solid var(--color-border-light);
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+.color-swatch:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+.color-swatch:active {
+  transform: translateY(0);
+}
+
+.color-swatch-preview {
+  height: 72px;
+  width: 100%;
+  transition: box-shadow var(--transition-fast);
+}
+
+.color-swatch-info {
+  padding: var(--space-sm);
+  background-color: var(--color-surface);
+  transition: background-color var(--transition-theme);
+}
+
+.color-swatch-name {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-2xs);
+  word-break: break-all;
+}
+
+.color-swatch-value {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: var(--color-text-muted);
+}
+
+.color-swatch-copied {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--color-success);
+  display: none;
+}
+.color-swatch.copied .color-swatch-copied {
+  display: block;
+}
+.color-swatch.copied .color-swatch-value {
+  display: none;
+}

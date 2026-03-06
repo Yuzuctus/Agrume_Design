@@ -1,0 +1,104 @@
+/* ═══════════════════════════════════════════════════
+   ZEST — Drag & Drop
+   ═══════════════════════════════════════════════════ */
+
+.drag-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-surface);
+  border: var(--border-width) solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  cursor: grab;
+  user-select: none;
+  transition:
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+.drag-item:hover {
+  border-color: var(--color-primary-alpha-25);
+}
+.drag-item:active {
+  cursor: grabbing;
+}
+.drag-item.dragging {
+  opacity: 0.5;
+  box-shadow: var(--shadow-lg);
+  transform: rotate(2deg);
+  border-color: var(--color-primary);
+  z-index: var(--z-dropdown);
+}
+.drag-item.drop-target {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-alpha-10);
+  box-shadow: var(--shadow-glow);
+}
+
+.drag-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--color-text-dim);
+  cursor: grab;
+}
+.drag-handle:active {
+  cursor: grabbing;
+}
+.drag-handle svg {
+  width: 14px;
+  height: 14px;
+}
+.drag-handle-dots::before {
+  content: "⋮⋮";
+  letter-spacing: 2px;
+  font-size: var(--text-sm);
+  color: var(--color-text-dim);
+}
+
+.drop-zone {
+  min-height: 60px;
+  padding: var(--space-md);
+  border: var(--border-thick) dashed var(--color-border-light);
+  border-radius: var(--radius-md);
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+.drop-zone.active {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-alpha-10);
+}
+.drop-zone-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: var(--text-sm);
+  color: var(--color-text-dim);
+}
+
+.drag-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.drag-list .insert-indicator {
+  height: 2px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+  margin: calc(var(--space-xs) * -1) 0;
+}
+.drag-item[aria-disabled="true"],
+.drag-item.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}

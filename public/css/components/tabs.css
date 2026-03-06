@@ -1,0 +1,107 @@
+/* ═══════════════════════════════════════════════════
+   ZEST — Tabs
+   .tabs + .tab + .tab-panel + pill + vertical
+   ═══════════════════════════════════════════════════ */
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border-bottom: var(--border-width) solid var(--color-border-light);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-lg);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+  margin-bottom: -1px;
+}
+.tab:hover {
+  color: var(--color-text);
+}
+.tab.active,
+.tab[aria-selected="true"] {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  font-weight: var(--weight-semibold);
+}
+.tab:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.tab svg {
+  width: 16px;
+  height: 16px;
+}
+
+.tab-panel {
+  display: none;
+  padding: var(--space-lg) 0;
+}
+.tab-panel.active,
+.tab-panel[data-active="true"] {
+  display: block;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+/* Pill variant */
+.tabs-pill {
+  border-bottom: none;
+  gap: var(--space-xs);
+  padding: var(--space-xs);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-btn);
+}
+.tabs-pill .tab {
+  border-bottom: none;
+  border-radius: var(--radius-btn);
+  margin-bottom: 0;
+  padding: var(--space-xs) var(--space-md);
+}
+.tabs-pill .tab.active {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+/* Vertical */
+.tabs-vertical {
+  flex-direction: column;
+  border-bottom: none;
+  border-right: var(--border-width) solid var(--color-border-light);
+  min-width: 180px;
+}
+.tabs-vertical .tab {
+  border-bottom: none;
+  border-right: 2px solid transparent;
+  margin-bottom: 0;
+  margin-right: -1px;
+  text-align: left;
+  justify-content: flex-start;
+}
+.tabs-vertical .tab.active {
+  border-right-color: var(--color-primary);
+}
+.tabs-layout {
+  display: flex;
+  gap: var(--space-lg);
+}
+.tabs-layout .tab-panel {
+  flex: 1;
+}

@@ -1,0 +1,65 @@
+/* ═══════════════════════════════════════════════════
+   ZEST — Rating Stars (NEW)
+   CSS-only interactive rating with radio hack
+   ═══════════════════════════════════════════════════ */
+
+.rating {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: var(--space-2xs);
+}
+
+.rating input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.rating label {
+  font-size: var(--text-2xl);
+  color: var(--color-border-light);
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+  line-height: 1;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+  color: var(--color-accent);
+  transform: scale(1.1);
+}
+
+.rating input[type="radio"]:checked ~ label {
+  color: var(--color-accent);
+}
+
+.rating input[type="radio"]:focus-visible + label {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+/* Sizes */
+.rating-sm label {
+  font-size: var(--text-lg);
+}
+.rating-lg label {
+  font-size: var(--text-4xl);
+}
+
+/* Read-only */
+.rating-readonly label {
+  cursor: default;
+  pointer-events: none;
+}
+.rating-readonly label:hover {
+  transform: none;
+}

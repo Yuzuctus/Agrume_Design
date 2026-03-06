@@ -1,0 +1,108 @@
+/* ═══════════════════════════════════════════════════
+   ZEST — Cards
+   .card + variants + card-grid
+   ═══════════════════════════════════════════════════ */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  border: var(--border-width) solid var(--color-border-light);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  transition:
+    box-shadow var(--transition-base),
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    background-color var(--transition-theme);
+}
+.card-header {
+  padding: var(--space-lg);
+  border-bottom: var(--border-width) solid var(--color-border-light);
+}
+.card-body {
+  padding: var(--space-lg);
+  flex: 1;
+}
+.card-footer {
+  padding: var(--space-md) var(--space-lg);
+  border-top: var(--border-width) solid var(--color-border-light);
+}
+.card-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.card-img-top {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+}
+
+/* Interactive */
+.card-interactive {
+  cursor: pointer;
+  box-shadow: var(--shadow-card);
+}
+.card-interactive:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+  border-color: var(--color-primary-alpha-25);
+}
+.card-interactive:active {
+  transform: translateY(0);
+}
+.card-interactive:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  box-shadow: var(--focus-ring);
+}
+
+/* Variants */
+.card-elevated {
+  background-color: var(--color-bg-elevated);
+  box-shadow: var(--shadow-md);
+}
+.card-elevated:hover {
+  box-shadow: var(--shadow-lg);
+}
+.card-outlined {
+  background-color: transparent;
+  border: var(--border-thick) solid var(--color-border);
+}
+.card-outlined:hover {
+  border-color: var(--color-primary);
+}
+.card-featured {
+  border-color: var(--color-primary-alpha-35);
+  box-shadow: var(--shadow-glow);
+  background-image: linear-gradient(
+    150deg,
+    var(--color-primary-alpha-10),
+    transparent 45%
+  );
+}
+.card-featured:hover {
+  box-shadow: var(--shadow-glow-strong);
+}
+.card-compact .card-header,
+.card-compact .card-body,
+.card-compact .card-footer {
+  padding: var(--space-md);
+}
+.card-flat {
+  border: none;
+  box-shadow: none;
+  background-color: var(--color-surface);
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+@media (max-width: 576px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,111 @@
+/* ═══════════════════════════════════════════════════
+   ZEST — Tables
+   .table + striped + compact + sortable + responsive
+   ═══════════════════════════════════════════════════ */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: var(--border-width) solid var(--color-border-light);
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+.table th,
+.table td {
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  border-bottom: var(--border-width) solid var(--color-border-light);
+}
+.table th {
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-text-muted);
+  background-color: var(--color-bg-alt);
+}
+.table td {
+  color: var(--color-text);
+}
+.table tbody tr {
+  transition: background-color var(--transition-fast);
+}
+.table tbody tr:hover {
+  background-color: var(--color-primary-alpha-10);
+}
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Striped: alternance bien visible une ligne sur deux */
+.table-striped tbody tr:nth-child(odd) {
+  background-color: transparent;
+}
+.table-striped tbody tr:nth-child(even) {
+  background-color: var(--color-bg-alt); /* #e3ece8 en light, #172f29 en dark */
+}
+.table-striped tbody tr:hover {
+  background-color: var(--color-primary-alpha-10);
+}
+.table-compact th,
+.table-compact td {
+  padding: var(--space-xs) var(--space-sm);
+}
+.table-borderless,
+.table-borderless th,
+.table-borderless td {
+  border: none;
+}
+
+.table-sortable th {
+  cursor: pointer;
+}
+.table-sortable th:hover {
+  color: var(--color-primary);
+}
+.table-sort-icon {
+  display: inline-block;
+  margin-left: var(--space-xs);
+  font-size: var(--text-xs);
+  opacity: 0.4;
+}
+th[aria-sort] .table-sort-icon {
+  opacity: 1;
+  color: var(--color-primary);
+}
+
+@media (max-width: 576px) {
+  .table-responsive {
+    display: block;
+  }
+  .table-responsive thead {
+    display: none;
+  }
+  .table-responsive tbody,
+  .table-responsive tr,
+  .table-responsive td {
+    display: block;
+  }
+  .table-responsive tr {
+    padding: var(--space-sm) 0;
+    border-bottom: var(--border-width) solid var(--color-border-light);
+  }
+  .table-responsive td {
+    padding: var(--space-2xs) var(--space-md);
+    border-bottom: none;
+    text-align: right;
+  }
+  .table-responsive td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-wider);
+  }
+}
