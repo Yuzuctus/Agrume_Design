@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html lang="fr" data-theme="system" data-theme-resolved="dark" data-product-mode="library">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuzuctus Demo - Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css/showcase.css" />
+    <link rel="stylesheet" href="../css/fixes.css" />
+  </head>
+  <body class="demo-page" data-shell-nav="closed">
+    <a class="skip-link" href="#content">Aller au contenu principal</a>
+    <header class="demo-navbar">
+      <div class="demo-navbar-primary">
+        <button
+          class="shell-menu-button"
+          type="button"
+          data-shell-toggle="nav"
+          aria-controls="libraryNav"
+          aria-expanded="false"
+          aria-label="Ouvrir la navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <a class="demo-brand" href="../styleguide.html"><span class="demo-brand-mark"></span>Skins Library</a>
+      </div>
+      <nav class="demo-nav" id="libraryNav" aria-label="Navigation des demos" data-shell-panel="nav" tabindex="-1">
+        <div class="shell-drawer-head">
+          <div class="shell-drawer-brandline">Navigation des demos</div>
+          <button class="shell-drawer-close" type="button" data-shell-close aria-label="Fermer le menu">x</button>
+        </div>
+        <div class="demo-nav-links">
+          <a class="demo-nav-link" href="../styleguide.html">Guide</a>
+          <a class="demo-nav-link" href="landing.html">Landing</a>
+          <a class="demo-nav-link" href="login.html">Connexion</a>
+          <a class="demo-nav-link" href="tool-dashboard.html">Tool</a>
+          <a class="demo-nav-link" aria-current="page" href="library.html">Library</a>
+          <a class="demo-nav-link" href="../readme.html">README</a>
+        </div>
+        <div class="shell-drawer-meta">
+          <span class="demo-theme-state">Theme: <strong data-theme-state>system</strong></span>
+        </div>
+      </nav>
+      <div class="demo-navbar-actions"><span class="demo-theme-state">Theme: <strong id="themeState" data-theme-state>system</strong></span><button class="theme-toggle" id="themeToggle" type="button" aria-label="Theme system (dark)"><svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg><svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg></button></div>
+    </header>
+    <div class="shell-overlay" data-shell-overlay></div>
+
+    <main class="demo-main" id="content">
+      <section class="brand-shell page-hero">
+        <div class="page-hero-grid">
+          <div class="page-hero-copy"><div class="hero-copy-intro"><span class="eyebrow">Library / collection</span><div class="hero-copy-block"><h1>Un catalogue plus editorial, sans perdre la clarte.</h1><p>Le mode library met plus l accent sur la decouverte, les tags, la collection et les cartes media. Le personnage reste present surtout a l entree.</p></div></div><div class="hero-support-shell"><div class="filter-row"><span class="filter-chip">Favourites</span><span class="filter-chip">Tournament</span><span class="filter-chip">Minimal</span></div><p class="hero-support-note">L accent or sert a donner du relief aux collections mises en avant. Les zones de browse restent calmes, lisibles et bien segmentees.</p></div></div>
+          <div class="hero-signature-visual"><img class="character-portrait hero-portrait" src="../img/altver/Yuzu_Joa-ver-banner.jpg" alt="Banniere Yuzu pour une library" loading="eager" /></div>
+        </div>
+      </section>
+
+      <section class="demo-section">
+        <div class="catalog-layout">
+          <aside class="catalog-sidebar"><div class="catalog-sidebar-head"><span class="eyebrow">Filters</span><p>Le panneau reste calme, editorial et tres lisible. Les filtres doivent se comprendre en quelques secondes.</p></div><div class="catalog-sidebar-group"><span class="toolbar-label">Search</span><label class="form-group"><span class="form-label">Search a skin</span><input class="form-input" type="search" placeholder="Search a skin" /></label></div><div class="catalog-sidebar-group"><span class="toolbar-label">Formats</span><div class="filter-row"><span class="filter-chip">HD</span><span class="filter-chip">DT</span><span class="filter-chip">Tournament</span></div></div><div class="alert alert-info"><div><div class="alert-title">Pattern</div>Sur une library, les filtres doivent etre lisibles avant d etre jolis.</div></div><div class="catalog-shortcut"><div><div class="alert-title">Acces rapide</div><p>La library doit toujours laisser un point d entree vers le dashboard tool pour les actions utilitaires.</p></div><a class="btn btn-secondary btn-sm" href="tool-dashboard.html">Ouvrir le tool</a></div></aside>
+          <div class="catalog-main"><div class="catalog-grid"><article class="skin-card skin-card-featured"><div class="skin-preview"></div><div class="skin-card-body"><div class="skin-card-head"><span class="quick-tag">Featured edit</span><strong>Azr8 inspired</strong><p class="text-muted">Clean tournament skin with readable accents et une priorite nette sur la lisibilite.</p></div><div class="skin-card-footer"><div class="tag-row"><span class="tag">HD</span><span class="tag">DT</span></div><span class="skin-card-action">Open set</span></div></div></article><article class="skin-card"><div class="skin-preview"></div><div class="skin-card-body"><div class="skin-card-head"><span class="quick-tag">Quiet</span><strong>Mint minimal</strong><p class="text-muted">Quiet surfaces, micro feedback plus doux et lecture plus detendue.</p></div><div class="skin-card-footer"><div class="tag-row"><span class="tag">Minimal</span><span class="tag">Fav</span></div><span class="skin-card-action">View notes</span></div></div></article><article class="skin-card"><div class="skin-preview"></div><div class="skin-card-body"><div class="skin-card-head"><span class="quick-tag">Highlight</span><strong>Gold highlight</strong><p class="text-muted">Une surface plus riche pour les collections mises en avant sans casser la clarte.</p></div><div class="skin-card-footer"><div class="tag-row"><span class="tag">Featured</span><span class="tag">Archive</span></div><span class="skin-card-action">Browse</span></div></div></article></div></div>
+        </div>
+      </section>
+
+      <footer class="demo-footer"><span>Library demo for skins.yuzuctus.fr direction.</span><a class="sg-backlink" href="../styleguide.html">Retour au guide</a></footer>
+    </main>
+
+    <div class="toast-container" id="toastContainer"></div>
+    <div class="sr-only" id="srAnnouncements" aria-live="polite" aria-atomic="true"></div>
+    <script src="../js/styleguide.js"></script>
+  </body>
+</html>

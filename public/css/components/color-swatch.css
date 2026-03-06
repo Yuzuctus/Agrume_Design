@@ -1,6 +1,7 @@
-/* ═══════════════════════════════════════════════════
-   ZEST — Color Swatch (NEW — Style Guide Demo)
-   ═══════════════════════════════════════════════════ */
+/* ===================================================
+   YUZUCTUS - Color Swatch
+   Button-based swatches for docs and token picking
+   =================================================== */
 
 .color-swatches {
   display: grid;
@@ -11,18 +12,32 @@
 .color-swatch {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding: 0;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: var(--border-width) solid var(--color-border-light);
+  background: transparent;
   cursor: pointer;
+  text-align: left;
   transition:
     transform var(--transition-fast),
-    box-shadow var(--transition-fast);
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
 }
+
 .color-swatch:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-glow);
+  border-color: var(--color-border-strong);
 }
+
+.color-swatch:focus-visible {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: var(--focus-ring);
+}
+
 .color-swatch:active {
   transform: translateY(0);
 }
@@ -59,9 +74,11 @@
   color: var(--color-success);
   display: none;
 }
+
 .color-swatch.copied .color-swatch-copied {
   display: block;
 }
+
 .color-swatch.copied .color-swatch-value {
   display: none;
 }

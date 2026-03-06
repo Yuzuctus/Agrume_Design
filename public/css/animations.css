@@ -1,9 +1,9 @@
-/* ═══════════════════════════════════════════════════
-   ZEST — Animations
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   YUZUCTUS â€” Animations
    Keyframes + utility classes + stagger delays
-   ═══════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ═══ KEYFRAMES ═══ */
+/* â•â•â• KEYFRAMES â•â•â• */
 @keyframes float {
   0%,
   100% {
@@ -115,7 +115,7 @@
   }
 }
 
-/* ═══ CLASSES ═══ */
+/* â•â•â• CLASSES â•â•â• */
 .animate-float {
   animation: float 5s ease-in-out infinite;
 }
@@ -144,7 +144,7 @@
   animation: scaleIn 0.2s ease forwards;
 }
 
-/* ═══ STAGGER DELAYS ═══ */
+/* â•â•â• STAGGER DELAYS â•â•â• */
 .delay-1 {
   animation-delay: 0.05s;
 }
@@ -164,7 +164,7 @@
   animation-delay: 0.3s;
 }
 
-/* ═══ REDUCED MOTION ═══ */
+/* â•â•â• REDUCED MOTION â•â•â• */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -188,3 +188,4 @@
     transform: none !important;
   }
 }
+

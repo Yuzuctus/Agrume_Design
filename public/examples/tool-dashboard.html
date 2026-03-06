@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html lang="fr" data-theme="system" data-theme-resolved="dark" data-product-mode="tool">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuzuctus Demo - Tool dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css/showcase.css" />
+    <link rel="stylesheet" href="../css/fixes.css" />
+  </head>
+  <body class="demo-page" data-shell-nav="closed">
+    <a class="skip-link" href="#content">Aller au contenu principal</a>
+    <header class="demo-navbar">
+      <div class="demo-navbar-primary">
+        <button
+          class="shell-menu-button"
+          type="button"
+          data-shell-toggle="nav"
+          aria-controls="toolNav"
+          aria-expanded="false"
+          aria-label="Ouvrir la navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <a class="demo-brand" href="../styleguide.html"><span class="demo-brand-mark"></span>Osurea / Zest</a>
+      </div>
+      <nav class="demo-nav" id="toolNav" aria-label="Navigation des demos" data-shell-panel="nav" tabindex="-1">
+        <div class="shell-drawer-head">
+          <div class="shell-drawer-brandline">Navigation des demos</div>
+          <button class="shell-drawer-close" type="button" data-shell-close aria-label="Fermer le menu">x</button>
+        </div>
+        <div class="demo-nav-links">
+          <a class="demo-nav-link" href="../styleguide.html">Guide</a>
+          <a class="demo-nav-link" href="landing.html">Landing</a>
+          <a class="demo-nav-link" href="login.html">Connexion</a>
+          <a class="demo-nav-link" aria-current="page" href="tool-dashboard.html">Tool</a>
+          <a class="demo-nav-link" href="library.html">Library</a>
+          <a class="demo-nav-link" href="../readme.html">README</a>
+        </div>
+        <div class="shell-drawer-meta">
+          <span class="demo-theme-state">Theme: <strong data-theme-state>system</strong></span>
+        </div>
+      </nav>
+      <div class="demo-navbar-actions"><span class="demo-theme-state">Theme: <strong id="themeState" data-theme-state>system</strong></span><button class="theme-toggle" id="themeToggle" type="button" aria-label="Theme system (dark)"><svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg><svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg></button></div>
+    </header>
+    <div class="shell-overlay" data-shell-overlay></div>
+
+    <main class="demo-main" id="content">
+      <section class="demo-section">
+        <div class="demo-section-head"><div><span class="eyebrow">Tool dashboard</span><h1>Une interface dense, mais propre et lisible.</h1></div><p>Le but n est pas de faire joli d abord. Le but est de rendre les actions rapides et les resultats faciles a comprendre.</p></div>
+        <div class="toolbar-shell"><div class="toolbar-primary"><div class="toolbar-search-shell"><span class="toolbar-label">Input principal</span><input class="form-input toolbar-search" type="search" placeholder="Coller une beatmap, une area, une URL..." /></div><div class="toolbar-actions"><button class="btn btn-primary" type="button">Analyser</button><button class="btn btn-ghost" type="button">Historique</button></div></div><div class="toolbar-secondary"><span class="toolbar-label">Filtres actifs</span><div class="filter-row"><span class="filter-chip">Recent</span><span class="filter-chip">Pinned</span><span class="filter-chip">Success only</span></div></div></div>
+      </section>
+
+      <section class="demo-section"><div class="kpi-grid"><article class="metric-card"><span class="metric-value">142</span><div class="metric-label">Analyses today</div></article><article class="metric-card"><span class="metric-value">98%</span><div class="metric-label">Successful runs</div></article><article class="metric-card"><span class="metric-value">0.8s</span><div class="metric-label">Average response</div></article><article class="metric-card"><span class="metric-value">12</span><div class="metric-label">Pinned presets</div></article></div></section>
+
+      <section class="demo-section">
+        <div class="dashboard-grid">
+          <article class="panel-shell"><div class="panel-shell-header"><h2 class="panel-shell-title">Recent results</h2><span class="quick-tag">Live</span></div><div class="table-wrapper"><table class="table table-striped table-compact"><thead><tr><th>Input</th><th>Type</th><th>Status</th><th>Time</th></tr></thead><tbody><tr><td>Area #88</td><td>Viewer</td><td>Ready</td><td>0.7s</td></tr><tr><td>Short URL /osu</td><td>Zest</td><td>Created</td><td>0.4s</td></tr><tr><td>Area #102</td><td>Viewer</td><td>Queued</td><td>1.1s</td></tr></tbody></table></div></article>
+          <article class="panel-shell"><div class="panel-shell-header"><h2 class="panel-shell-title">Helpful side panel</h2><span class="quick-tag">Pinned</span></div><div class="results-list"><div class="results-item"><div><strong>Default preset</strong><div class="link-card-meta">Fast launch configuration</div></div><span class="tag">Preset</span></div><div class="results-item"><div><strong>Last success</strong><div class="link-card-meta">Area #88 exported correctly</div></div><span class="tag">Success</span></div><div class="results-item"><div><strong>Need attention</strong><div class="link-card-meta">One invalid input in history</div></div><span class="tag">Review</span></div></div><div class="empty-state"><img class="empty-state-visual" src="../img/yuzuchibi3_nobg.png" alt="Petit rappel Yuzu dans un empty state tool" loading="lazy" /><p>Dans un tool, le personnage reste secondaire. Ici il sert juste a rendre l etat vide plus humain.</p></div></article>
+        </div>
+      </section>
+
+      <footer class="demo-footer"><span>Tool demo for Osurea and Zest style decisions.</span><a class="sg-backlink" href="../styleguide.html">Retour au guide</a></footer>
+    </main>
+
+    <div class="toast-container" id="toastContainer"></div>
+    <div class="sr-only" id="srAnnouncements" aria-live="polite" aria-atomic="true"></div>
+    <script src="../js/styleguide.js"></script>
+  </body>
+</html>

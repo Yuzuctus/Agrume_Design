@@ -1,9 +1,10 @@
 /* ===================================================
-   AGRUME - Dark Theme Adjustments
+   YUZUCTUS - Dark Theme Adjustments
    =================================================== */
 
-:root,
-[data-theme="dark"] {
+[data-theme="dark"],
+[data-theme="system"][data-theme-resolved="dark"],
+:root {
   .card {
     background-color: var(--color-surface);
   }
@@ -23,12 +24,6 @@
       var(--color-bg-elevated) 84%,
       var(--color-surface) 16%
     );
-  }
-
-  .form-input:focus,
-  .form-textarea:focus,
-  .form-select:focus {
-    box-shadow: var(--focus-ring), 0 0 0 4px var(--color-primary-alpha-10);
   }
 
   code,

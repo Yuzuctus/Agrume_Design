@@ -1,0 +1,217 @@
+﻿/* YUZUCTUS - Profile accents and character framing */
+
+:root {
+  --site-accent: var(--color-primary);
+  --site-accent-soft: var(--color-primary-alpha-15);
+  --site-accent-border: var(--color-primary-alpha-35);
+  --site-accent-ink: var(--color-ink-primary);
+  --site-motif:
+    radial-gradient(circle at 18% 18%, color-mix(in srgb, var(--site-accent) 10%, transparent), transparent 56%),
+    radial-gradient(circle at 84% 10%, color-mix(in srgb, var(--site-accent) 6%, transparent), transparent 44%);
+  --site-shell-gap: var(--space-2xl);
+  --site-shell-density: 1;
+  --site-shell-radius: var(--radius-card);
+}
+
+[data-product-mode="social"] {
+  --site-accent: var(--color-pop);
+  --site-accent-soft: color-mix(in srgb, var(--color-pop) 12%, transparent);
+  --site-accent-border: color-mix(in srgb, var(--color-pop) 26%, transparent);
+  --site-accent-ink: var(--color-ink-pop);
+  --site-motif:
+    radial-gradient(circle at 18% 20%, var(--site-accent-soft), transparent 56%),
+    radial-gradient(circle at 84% 18%, color-mix(in srgb, var(--color-primary) 7%, transparent), transparent 46%);
+}
+
+[data-product-mode="tool"] {
+  --site-accent: var(--color-secondary);
+  --site-accent-soft: color-mix(in srgb, var(--color-secondary) 10%, transparent);
+  --site-accent-border: color-mix(in srgb, var(--color-secondary) 24%, transparent);
+  --site-accent-ink: var(--color-ink-secondary);
+  --site-motif:
+    radial-gradient(circle at 82% 18%, var(--site-accent-soft), transparent 42%),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-secondary) 6%, transparent), transparent 62%);
+  --site-shell-gap: var(--space-lg);
+  --site-shell-density: 0.94;
+  --site-shell-radius: 24px;
+}
+
+[data-product-mode="library"] {
+  --site-accent: var(--color-accent);
+  --site-accent-soft: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  --site-accent-border: color-mix(in srgb, var(--color-accent) 28%, transparent);
+  --site-accent-ink: var(--color-ink-accent);
+  --site-motif:
+    radial-gradient(circle at 18% 18%, var(--site-accent-soft), transparent 56%),
+    radial-gradient(circle at 78% 14%, color-mix(in srgb, var(--color-accent) 7%, transparent), transparent 44%);
+}
+
+.brand-shell {
+  position: relative;
+  overflow: hidden;
+  border: var(--border-width) solid var(--site-accent-border);
+  border-radius: var(--site-shell-radius);
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-bg-elevated) 94%, transparent),
+      color-mix(in srgb, var(--color-surface) 92%, var(--color-bg-elevated)) 58%,
+      color-mix(in srgb, var(--color-surface-strong) 18%, var(--color-surface))
+    );
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, white 8%, transparent),
+    var(--shadow-card);
+}
+
+.brand-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    var(--site-motif),
+    linear-gradient(180deg, color-mix(in srgb, white 8%, transparent), transparent 20%),
+    linear-gradient(90deg, color-mix(in srgb, white 5%, transparent), transparent 14%, transparent 86%, color-mix(in srgb, black 8%, transparent));
+  opacity: 0.45;
+}
+
+.brand-shell > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-signature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: clamp(var(--space-lg), 5vw, var(--space-3xl));
+  align-items: center;
+}
+
+.hero-signature-copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--site-shell-gap);
+}
+
+.hero-signature-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  width: fit-content;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--site-accent-ink);
+  background: color-mix(in srgb, var(--site-accent) 10%, transparent);
+  border: var(--border-width) solid var(--site-accent-border);
+  border-radius: var(--radius-full);
+}
+
+.hero-signature-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.character-portrait,
+.character-mascot,
+.character-sticker {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.character-portrait {
+  width: min(100%, 420px);
+  border-radius: 32px;
+  border: var(--border-width) solid color-mix(in srgb, var(--site-accent) 20%, transparent);
+  box-shadow: var(--shadow-float);
+}
+
+.character-mascot {
+  width: min(100%, 280px);
+  filter: drop-shadow(0 20px 28px rgba(7, 20, 18, 0.16));
+}
+
+.character-sticker {
+  width: 92px;
+  filter: drop-shadow(0 10px 18px rgba(7, 20, 18, 0.12));
+}
+
+.asset-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: flex-end;
+}
+
+.asset-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--site-accent) 12%, transparent);
+  border: var(--border-width) solid var(--site-accent-border);
+  color: var(--site-accent-ink);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-lg);
+}
+
+.project-card {
+  padding: var(--space-lg);
+  border-radius: var(--radius-card);
+  border: var(--border-width) solid var(--color-border-light);
+  background: color-mix(in srgb, var(--color-surface) 94%, transparent);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, white 6%, transparent),
+    var(--shadow-sm);
+}
+
+.project-card h3 {
+  margin-bottom: var(--space-xs);
+}
+
+.project-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.project-card .project-card-meta {
+  margin-top: var(--space-sm);
+  font-size: var(--text-xs);
+  color: var(--color-text-dim);
+}
+
+.project-card[data-product-mode="social"] {
+  border-color: color-mix(in srgb, var(--color-pop) 24%, var(--color-border-light));
+}
+
+.project-card[data-product-mode="tool"] {
+  border-color: color-mix(in srgb, var(--color-secondary) 22%, var(--color-border-light));
+}
+
+.project-card[data-product-mode="library"] {
+  border-color: color-mix(in srgb, var(--color-accent) 24%, var(--color-border-light));
+}
+
+@media (max-width: 900px) {
+  .hero-signature {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-signature-copy {
+    order: 2;
+  }
+
+  .hero-signature-visual {
+    order: 1;
+  }
+}

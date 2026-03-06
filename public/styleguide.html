@@ -1,1715 +1,433 @@
-<!doctype html>
-<html lang="en" data-theme="dark">
+﻿<!doctype html>
+<html lang="fr" data-theme="system" data-theme-resolved="dark" data-product-mode="social">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agrume Design System - Style Guide</title>
+    <title>Yuzuctus Design System - Charte et demos</title>
     <meta
       name="description"
-      content="The complete style guide and documentation for the Agrume design system - OC-driven visual identity."
+      content="Charte graphique partagee Yuzuctus pour reconstruire yuzuctus.fr, Osurea, Skins et Zest avec une base commune moderne et lisible."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/styleguide.css" />
+    <link rel="stylesheet" href="css/showcase.css" />
+    <link rel="stylesheet" href="css/fixes.css" />
   </head>
-  <body>
-    <!-- ═══ Sidebar ═══ -->
-    <aside class="sg-sidebar" id="sgSidebar">
-      <div class="sg-sidebar-header">
-        <div class="sg-sidebar-brand">Agrume</div>
-        <div class="sg-sidebar-version">OC-driven v1.0</div>
+  <body data-shell-nav="closed" data-guide-sidebar="expanded">
+    <a class="skip-link" href="#mainContent">Aller au contenu principal</a>
+
+    <aside class="sg-sidebar" id="sgSidebar" data-shell-panel="nav" tabindex="-1">
+      <div class="shell-drawer-head sg-sidebar-drawer-head">
+        <div>
+          <div class="sg-sidebar-brand">Yuzuctus</div>
+          <div class="sg-sidebar-version">Shared DA v2.1</div>
+        </div>
+        <button class="shell-drawer-close" type="button" data-shell-close aria-label="Fermer le panneau">x</button>
       </div>
-      <nav class="sg-sidebar-nav">
-        <div class="sg-nav-section">Getting Started</div>
+      <div class="sg-sidebar-header">
+        <div class="sg-sidebar-brand">Yuzuctus</div>
+        <div class="sg-sidebar-version">Shared DA v2.1</div>
+      </div>
+      <nav class="sg-sidebar-nav" aria-label="Sections du guide">
+        <div class="sg-nav-section">Vue d ensemble</div>
         <a href="#intro" class="sg-nav-link active">Introduction</a>
-        <a href="#dna" class="sg-nav-link">Character DNA</a>
-        <a href="#colors" class="sg-nav-link">Colors</a>
-        <a href="#typography" class="sg-nav-link">Typography</a>
-        <a href="#spacing" class="sg-nav-link">Spacing</a>
-        <div class="sg-nav-section">Components</div>
-        <a href="#buttons" class="sg-nav-link">Buttons</a>
-        <a href="#forms" class="sg-nav-link">Forms</a>
-        <a href="#cards" class="sg-nav-link">Cards</a>
-        <a href="#badges" class="sg-nav-link">Badges</a>
-        <a href="#alerts" class="sg-nav-link">Alerts & Toasts</a>
-        <a href="#modals" class="sg-nav-link">Modals</a>
-        <a href="#tables" class="sg-nav-link">Tables</a>
-        <div class="sg-nav-section">Navigation</div>
-        <a href="#navbar" class="sg-nav-link">Navbar</a>
-        <a href="#tabs" class="sg-nav-link">Tabs</a>
-        <a href="#breadcrumbs" class="sg-nav-link">Breadcrumbs</a>
-        <a href="#pagination" class="sg-nav-link">Pagination</a>
-        <a href="#accordion" class="sg-nav-link">Accordion</a>
-        <div class="sg-nav-section">More</div>
-        <a href="#avatars" class="sg-nav-link">Avatars</a>
-        <a href="#loaders" class="sg-nav-link">Loaders</a>
-        <a href="#tooltips" class="sg-nav-link">Tooltips</a>
-        <a href="#dragdrop" class="sg-nav-link">Drag & Drop</a>
-        <div class="sg-nav-section">New Components</div>
-        <a href="#progress" class="sg-nav-link">Progress Bars</a>
-        <a href="#stepper" class="sg-nav-link">Stepper</a>
-        <a href="#range" class="sg-nav-link">Range Slider</a>
-        <a href="#rating" class="sg-nav-link">Rating Stars</a>
+        <a href="#principles" class="sg-nav-link">Principes</a>
+        <a href="#projects" class="sg-nav-link">Projets cibles</a>
+        <a href="#tokens" class="sg-nav-link">Tokens</a>
+        <a href="#assets" class="sg-nav-link">Assets Yuzu</a>
+        <div class="sg-nav-section">Representation</div>
+        <a href="#components" class="sg-nav-link">Composants</a>
+        <a href="#pages" class="sg-nav-link">Pages examples</a>
+        <a href="#rules" class="sg-nav-link">Regles humain + IA</a>
+        <a href="#shipping" class="sg-nav-link">Livraison</a>
       </nav>
+      <div class="sg-sidebar-compact-only">
+        <div class="sg-nav-section">Demos</div>
+        <nav class="sg-sidebar-subnav" aria-label="Navigation des demos">
+          <a class="demo-nav-link" aria-current="page" href="styleguide.html">Guide</a>
+          <a class="demo-nav-link" href="examples/landing.html">Landing</a>
+          <a class="demo-nav-link" href="examples/login.html">Connexion</a>
+          <a class="demo-nav-link" href="examples/tool-dashboard.html">Tool</a>
+          <a class="demo-nav-link" href="examples/library.html">Library</a>
+          <a class="demo-nav-link" href="readme.html">README</a>
+        </nav>
+        <div class="sg-sidebar-compact-meta">Theme: <strong data-theme-state>system</strong></div>
+      </div>
     </aside>
 
-    <!-- ═══ Overlay (mobile) ═══ -->
-    <div class="sg-overlay" id="sgOverlay"></div>
+    <div class="shell-overlay" data-shell-overlay></div>
 
-    <!-- ═══ Main Area ═══ -->
     <div class="sg-main">
-      <!-- Header -->
-      <header class="sg-header">
-        <div class="sg-header-actions">
-          <button class="sg-hamburger" id="sgHamburger" aria-label="Menu">
+      <header class="demo-navbar sg-header">
+        <div class="demo-navbar-primary sg-header-primary">
+          <button
+            class="shell-menu-button"
+            type="button"
+            data-shell-toggle="nav"
+            aria-controls="sgSidebar"
+            aria-expanded="false"
+            aria-label="Ouvrir la navigation"
+          >
             <span></span><span></span><span></span>
           </button>
-          <span class="sg-header-title">Agrume Style Guide</span>
-        </div>
-        <div class="sg-header-actions">
-          <span class="badge badge-primary badge-sm">v1.0</span>
           <button
-            class="theme-toggle"
-            id="themeToggle"
-            aria-label="Toggle theme"
+            class="shell-sidebar-button"
+            type="button"
+            data-shell-toggle="guide-sidebar"
+            aria-pressed="false"
+            aria-label="Replier la sidebar"
           >
-            <svg
-              class="icon-sun"
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="12" r="5" />
-              <line x1="12" y1="1" x2="12" y2="3" />
-              <line x1="12" y1="21" x2="12" y2="23" />
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-              <line x1="1" y1="12" x2="3" y2="12" />
-              <line x1="21" y1="12" x2="23" y2="12" />
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-            </svg>
-            <svg
-              class="icon-moon"
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-            </svg>
+            <span class="shell-sidebar-button-mark" aria-hidden="true"></span>
+            <span data-guide-toggle-label>Replier la sidebar</span>
+          </button>
+          <a class="demo-brand sg-header-brand" href="styleguide.html"><span class="demo-brand-mark"></span>Yuzuctus</a>
+        </div>
+        <nav class="demo-nav sg-header-nav" aria-label="Navigation des demos">
+          <div class="demo-nav-links">
+            <a class="demo-nav-link" aria-current="page" href="styleguide.html">Guide</a>
+            <a class="demo-nav-link" href="examples/landing.html">Landing</a>
+            <a class="demo-nav-link" href="examples/login.html">Connexion</a>
+            <a class="demo-nav-link" href="examples/tool-dashboard.html">Tool</a>
+            <a class="demo-nav-link" href="examples/library.html">Library</a>
+            <a class="demo-nav-link" href="readme.html">README</a>
+          </div>
+        </nav>
+        <div class="demo-navbar-actions sg-header-actions">
+          <span class="sg-header-title">Shared DA v2.1</span>
+          <span class="sg-theme-state">Theme: <strong id="themeState" data-theme-state>system</strong></span>
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Theme system (dark)">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg>
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
           </button>
         </div>
       </header>
 
-      <div class="sg-content">
-        <!-- ═══ INTRODUCTION ═══ -->
+      <main class="sg-content" id="mainContent">
         <section id="intro" class="sg-section">
-          <div
-            class="hero hero-short hero-organic"
-            style="min-height: auto; padding: var(--space-2xl) 0"
-          >
-            <div class="hero-blob hero-blob-1"></div>
-            <div class="hero-blob hero-blob-2"></div>
-            <div class="hero-content">
-              <h1 class="hero-title">
-                <span class="text-primary">Agrume</span> Design System
-              </h1>
-              <p class="hero-subtitle">
-                Mint-lagoon identity with soft gold, blush accents, and
-                structured pastels. Dark-first, responsive, and accessible.
-              </p>
-              <div class="hero-stats">
-                <div class="hero-stat">
-                  <div class="hero-stat-value">115+</div>
-                  <div class="hero-stat-label">CSS Tokens</div>
+          <div class="brand-shell page-hero">
+            <div class="page-hero-grid">
+              <div class="page-hero-copy">
+                <div class="hero-copy-intro">
+                  <span class="eyebrow">Charte de reconstruction Yuzuctus</span>
+                  <div class="hero-copy-block">
+                    <h1>Une base visuelle unique pour refaire tous tes sites.</h1>
+                    <p>
+                      Cette page sert d abord a reconstruire correctement tes projets. Elle doit etre lisible par un humain,
+                      exploitable par une IA, et assez solide pour servir aussi de demo technique dans un portfolio.
+                    </p>
+                  </div>
                 </div>
-                <div class="hero-stat">
-                  <div class="hero-stat-value">30</div>
-                  <div class="hero-stat-label">Components</div>
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="examples/landing.html">Voir la landing</a>
+                  <a class="btn btn-secondary" href="examples/tool-dashboard.html">Voir un tool</a>
+                  <a class="btn btn-ghost" href="readme.html">Lire le README</a>
                 </div>
-                <div class="hero-stat">
-                  <div class="hero-stat-value">2</div>
-                  <div class="hero-stat-label">Themes</div>
+                <div class="hero-support-shell">
+                  <p class="hero-support-note">Le shell doit tenir avant la deco: encres lisibles, accents diriges, presence du personnage limitee et claire.</p>
+                  <div class="sg-pill-row">
+                    <span class="asset-chip">Humain first</span>
+                    <span class="asset-chip">IA readable</span>
+                    <span class="asset-chip">Sites statiques ou apps</span>
+                  </div>
                 </div>
               </div>
+              <div class="hero-signature-visual">
+                <img
+                  class="character-portrait hero-portrait"
+                  src="img/altver/Yuzu_Joa-ver-zoom.jpg"
+                  alt="Portrait principal de Yuzu pour les hero signatures"
+                  loading="eager"
+                />
+              </div>
             </div>
           </div>
-        </section>
 
-        <!-- Character DNA -->
-        <section id="dna" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">Character DNA</h2>
-            <p class="sg-section-desc">
-              Agrume translates OC identity into reusable UI rules: mint hair energy,
-              lagoon fabric depth, soft gold accessories, and blush emotion as a
-              secondary accent.
-            </p>
-          </div>
-
-          <div class="dna-grid">
-            <article class="dna-card">
-              <h3>Color Story</h3>
-              <p>
-                Primary interactions stay mint-lagoon. Gold marks key highlights.
-                Blush appears in emotional details and never dominates layout.
-              </p>
-              <div class="dna-palette">
-                <span class="dna-chip"><span class="dna-chip-dot" style="background: var(--color-primary)"></span>Mint Lagoon</span>
-                <span class="dna-chip"><span class="dna-chip-dot" style="background: var(--color-secondary)"></span>Lagoon Blue</span>
-                <span class="dna-chip"><span class="dna-chip-dot" style="background: var(--color-accent)"></span>Soft Gold</span>
-                <span class="dna-chip"><span class="dna-chip-dot" style="background: var(--color-pop)"></span>Blush Accent</span>
-              </div>
+          <div class="sg-stat-grid">
+            <article class="sg-stat">
+              <span class="sg-stat-value">4</span>
+              <div class="sg-stat-label">Projets actuels couverts</div>
             </article>
-
-            <article class="dna-card">
-              <h3>Shape Language</h3>
-              <p>
-                Rounded cards, gentle depth, and soft motifs keep interfaces cute but
-                structured. Decorative patterns remain in presentation areas only.
-              </p>
+            <article class="sg-stat">
+              <span class="sg-stat-value">4</span>
+              <div class="sg-stat-label">Pages examples prêtes a ouvrir</div>
             </article>
-
-            <article class="dna-card">
-              <h3>Motion Tone</h3>
-              <p>
-                Motion is subtle and alive: short transitions, clear feedback, and
-                reduced-motion respect for accessibility by default.
-              </p>
-            </article>
-          </div>
-
-          <div class="dna-rules">
-            <article class="dna-rule dna-rule-good">
-              <h4>Do</h4>
-              <ul>
-                <li>Use mint-lagoon for primary actions and active states.</li>
-                <li>Keep blush for tags, highlights, and emotional micro-details.</li>
-                <li>Prefer soft elevation over strong neon glow.</li>
-              </ul>
-            </article>
-
-            <article class="dna-rule dna-rule-avoid">
-              <h4>Do Not</h4>
-              <ul>
-                <li>Turn blush into a dominant background color.</li>
-                <li>Stack heavy animations on every component.</li>
-                <li>Use decorative motifs in dense data tables or forms.</li>
-              </ul>
+            <article class="sg-stat">
+              <span class="sg-stat-value">3</span>
+              <div class="sg-stat-label">Usages officiels du personnage</div>
             </article>
           </div>
         </section>
 
-        <!-- Colors -->
-        <section id="colors" class="sg-section">
+        <section id="principles" class="sg-section">
           <div class="sg-section-header">
-            <h2 class="sg-section-title">🎨 Color Palette</h2>
+            <h2 class="sg-section-title">Principes de la charte</h2>
             <p class="sg-section-desc">
-              Click any swatch to copy the token name. Architecture dark-first:
-              <code>:root</code> = dark, <code>[data-theme="light"]</code> =
-              override.
+              La palette et Yuzu donnent la personnalite. La structure et les regles evitent l effet template ou l effet IA.
             </p>
           </div>
 
-          <div class="sg-demo-label">Background & Surface</div>
-          <div class="color-swatches" style="margin-bottom: var(--space-lg)">
-            <div class="color-swatch" data-color="--color-bg">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-bg)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-bg</div>
-                <div class="color-swatch-value">Background</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
-            </div>
-            <div class="color-swatch" data-color="--color-bg-elevated">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-bg-elevated)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-bg-elevated</div>
-                <div class="color-swatch-value">Elevated</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
-            </div>
-            <div class="color-swatch" data-color="--color-bg-alt">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-bg-alt)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-bg-alt</div>
-                <div class="color-swatch-value">Alternative</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
-            </div>
-            <div class="color-swatch" data-color="--color-surface">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-surface)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-surface</div>
-                <div class="color-swatch-value">Surface</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
-            </div>
-            <div class="color-swatch" data-color="--color-surface-hover">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-surface-hover)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-surface-hover</div>
-                <div class="color-swatch-value">Surface Hover</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
+          <div class="sg-grid-4">
+            <article class="sg-principle-card">
+              <h3>Base commune</h3>
+              <p>Les surfaces, la typo, les etats et les contrastes restent stables sur tous les projets.</p>
+            </article>
+            <article class="sg-principle-card">
+              <h3>Accent par projet</h3>
+              <p>On change l accent et le ton, pas toute l identite. Pas de theme completement different a chaque site.</p>
+            </article>
+            <article class="sg-principle-card">
+              <h3>Personnage cible</h3>
+              <p>Yuzu apparait au hero, dans les empty states et dans les details affectifs. Pas partout, pas en deco gratuite.</p>
+            </article>
+            <article class="sg-principle-card">
+              <h3>Lisibilite avant deco</h3>
+              <p>Les textes courts utilisent les encres, pas les pastels. Les motifs restent doux, jamais envahissants.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="projects" class="sg-section">
+          <div class="sg-section-header">
+            <h2 class="sg-section-title">Projets cibles</h2>
+            <p class="sg-section-desc">
+              Au lieu de parler de categories abstraites, voici la traduction directe pour tes sites reels et tes prochains projets.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card" data-product-mode="social">
+              <span class="asset-chip">yuzuctus.fr</span>
+              <h3>Hub personnel / landing sociale</h3>
+              <p>Hero plus chaleureux, cartes bento, portrait visible, blush en details secondaires.</p>
+              <div class="project-card-meta">Mots cles: accueil, lien, identite, signature.</div>
+            </article>
+            <article class="project-card" data-product-mode="tool">
+              <span class="asset-chip">osurea.yuzuctus.fr</span>
+              <h3>Tool dense et clair</h3>
+              <p>Structure plus precise, tableau, toolbar, donnees lisibles, personnage limite aux moments d entree ou de vide.</p>
+              <div class="project-card-meta">Mots cles: shell, panel, donnees, resultat.</div>
+            </article>
+            <article class="project-card" data-product-mode="library">
+              <span class="asset-chip">skins.yuzuctus.fr</span>
+              <h3>Library / collection</h3>
+              <p>Hero editorial, cartes media, filtres visibles, accent or plus present sans casser la lisibilite.</p>
+              <div class="project-card-meta">Mots cles: collection, decouverte, tags, cartes.</div>
+            </article>
+            <article class="project-card" data-product-mode="tool">
+              <span class="asset-chip">zest.yuzuctus.fr</span>
+              <h3>Tool court et utilitaire</h3>
+              <p>Memes bases que les outils: feedback clair, CTA net, resultats et historique simples a parcourir.</p>
+              <div class="project-card-meta">Mots cles: action, resultat, historique, friction basse.</div>
+            </article>
+          </div>
+        </section>
+
+        <section id="tokens" class="sg-section">
+          <div class="sg-section-header">
+            <h2 class="sg-section-title">Tokens et roles couleur</h2>
+            <p class="sg-section-desc">
+              La regle cle: les encres servent au texte, les accents servent surtout aux surfaces, badges, focus et signatures visuelles.
+            </p>
+          </div>
+
+          <div class="sg-grid-3 mb-lg">
+            <article class="sg-token-rule">
+              <h3>Foundation</h3>
+              <p>Fonds, surfaces, elevations, bordures. C est la base stable du systeme.</p>
+            </article>
+            <article class="sg-token-rule">
+              <h3>Ink</h3>
+              <p>Texte principal, texte mute, liens, encre primaire. Ce sont les tokens a utiliser pour la lecture.</p>
+            </article>
+            <article class="sg-token-rule">
+              <h3>Decorative</h3>
+              <p>Mint, lagoon, gold, blush. A utiliser pour les surfaces, pas pour du petit texte critique.</p>
+            </article>
+          </div>
+
+          <div class="sg-demo">
+            <div class="sg-demo-label">Foundation surfaces</div>
+            <div class="color-swatches">
+              <button class="color-swatch" type="button" data-color="--color-bg" aria-label="Copy --color-bg"><span class="color-swatch-preview" data-preview-token="--color-bg"></span><span class="color-swatch-info"><span class="color-swatch-name">--color-bg</span><span class="color-swatch-value">Fond de page</span><span class="color-swatch-copied">Copied</span></span></button>
+              <button class="color-swatch" type="button" data-color="--color-surface" aria-label="Copy --color-surface"><span class="color-swatch-preview" data-preview-token="--color-surface"></span><span class="color-swatch-info"><span class="color-swatch-name">--color-surface</span><span class="color-swatch-value">Surface principale</span><span class="color-swatch-copied">Copied</span></span></button>
+              <button class="color-swatch" type="button" data-color="--color-bg-elevated" aria-label="Copy --color-bg-elevated"><span class="color-swatch-preview" data-preview-token="--color-bg-elevated"></span><span class="color-swatch-info"><span class="color-swatch-name">--color-bg-elevated</span><span class="color-swatch-value">Surface elevee</span><span class="color-swatch-copied">Copied</span></span></button>
+              <button class="color-swatch" type="button" data-color="--color-border-light" aria-label="Copy --color-border-light"><span class="color-swatch-preview" data-preview-token="--color-border-light"></span><span class="color-swatch-info"><span class="color-swatch-name">--color-border-light</span><span class="color-swatch-value">Bordure douce</span><span class="color-swatch-copied">Copied</span></span></button>
             </div>
           </div>
 
-          <div class="sg-demo-label">Primary & Accent</div>
-          <div class="color-swatches" style="margin-bottom: var(--space-lg)">
-            <div class="color-swatch" data-color="--color-primary">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-primary)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-primary</div>
-                <div class="color-swatch-value">Mint Lagoon</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
-            </div>
-            <div class="color-swatch" data-color="--color-primary-hover">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-primary-hover)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-primary-hover</div>
-                <div class="color-swatch-value">Primary Hover</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
-            </div>
-            <div class="color-swatch" data-color="--color-primary-muted">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-primary-muted)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-primary-muted</div>
-                <div class="color-swatch-value">Primary Muted</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
-            </div>
-            <div class="color-swatch" data-color="--color-accent">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-accent)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-accent</div>
-                <div class="color-swatch-value">Soft Gold</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
-            </div>
-            <div class="color-swatch" data-color="--color-secondary">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-secondary)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-secondary</div>
-                <div class="color-swatch-value">Lagoon Blue</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
+          <div class="sg-demo">
+            <div class="sg-demo-label">Ink colors</div>
+            <div class="color-swatches">
+              <button class="color-swatch" type="button" data-color="--color-ink" aria-label="Copy --color-ink"><span class="color-swatch-preview" data-preview-token="--color-ink"></span><span class="color-swatch-info"><span class="color-swatch-name">--color-ink</span><span class="color-swatch-value">Texte principal</span><span class="color-swatch-copied">Copied</span></span></button>
+              <button class="color-swatch" type="button" data-color="--color-ink-muted" aria-label="Copy --color-ink-muted"><span class="color-swatch-preview" data-preview-token="--color-ink-muted"></span><span class="color-swatch-info"><span class="color-swatch-name">--color-ink-muted</span><span class="color-swatch-value">Texte mute</span><span class="color-swatch-copied">Copied</span></span></button>
+              <button class="color-swatch" type="button" data-color="--color-ink-primary" aria-label="Copy --color-ink-primary"><span class="color-swatch-preview" data-preview-token="--color-ink-primary"></span><span class="color-swatch-info"><span class="color-swatch-name">--color-ink-primary</span><span class="color-swatch-value">Texte action</span><span class="color-swatch-copied">Copied</span></span></button>
+              <button class="color-swatch" type="button" data-color="--color-link" aria-label="Copy --color-link"><span class="color-swatch-preview" data-preview-token="--color-link"></span><span class="color-swatch-info"><span class="color-swatch-name">--color-link</span><span class="color-swatch-value">Lien accessible</span><span class="color-swatch-copied">Copied</span></span></button>
             </div>
           </div>
 
-          <div class="sg-demo-label">Text & Border</div>
-          <div class="color-swatches" style="margin-bottom: var(--space-lg)">
-            <div class="color-swatch" data-color="--color-text">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-text)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-text</div>
-                <div class="color-swatch-value">Main Text</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
-            </div>
-            <div class="color-swatch" data-color="--color-text-muted">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-text-muted)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-text-muted</div>
-                <div class="color-swatch-value">Muted</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
-            </div>
-            <div class="color-swatch" data-color="--color-text-dim">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-text-dim)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-text-dim</div>
-                <div class="color-swatch-value">Dim</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
-            </div>
-            <div class="color-swatch" data-color="--color-on-primary">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-on-primary)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-on-primary</div>
-                <div class="color-swatch-value">On Primary</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="sg-demo-label">Feedback</div>
-          <div class="color-swatches">
-            <div class="color-swatch" data-color="--color-success">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-success)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-success</div>
-                <div class="color-swatch-value">Success</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
-            </div>
-            <div class="color-swatch" data-color="--color-warning">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-warning)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-warning</div>
-                <div class="color-swatch-value">Warning</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
-            </div>
-            <div class="color-swatch" data-color="--color-error">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-error)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-error</div>
-                <div class="color-swatch-value">Error</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
-            </div>
-            <div class="color-swatch" data-color="--color-pop">
-              <div
-                class="color-swatch-preview"
-                style="background: var(--color-pop)"
-              ></div>
-              <div class="color-swatch-info">
-                <div class="color-swatch-name">--color-pop</div>
-                <div class="color-swatch-value">Pop</div>
-                <div class="color-swatch-copied">Copied!</div>
-              </div>
+          <div class="sg-demo">
+            <div class="sg-demo-label">Decorative accents</div>
+            <div class="color-swatches">
+              <button class="color-swatch" type="button" data-color="--color-primary" aria-label="Copy --color-primary"><span class="color-swatch-preview" data-preview-token="--color-primary"></span><span class="color-swatch-info"><span class="color-swatch-name">--color-primary</span><span class="color-swatch-value">Mint / action surface</span><span class="color-swatch-copied">Copied</span></span></button>
+              <button class="color-swatch" type="button" data-color="--color-secondary" aria-label="Copy --color-secondary"><span class="color-swatch-preview" data-preview-token="--color-secondary"></span><span class="color-swatch-info"><span class="color-swatch-name">--color-secondary</span><span class="color-swatch-value">Lagoon / tools</span><span class="color-swatch-copied">Copied</span></span></button>
+              <button class="color-swatch" type="button" data-color="--color-accent" aria-label="Copy --color-accent"><span class="color-swatch-preview" data-preview-token="--color-accent"></span><span class="color-swatch-info"><span class="color-swatch-name">--color-accent</span><span class="color-swatch-value">Gold / premium</span><span class="color-swatch-copied">Copied</span></span></button>
+              <button class="color-swatch" type="button" data-color="--color-pop" aria-label="Copy --color-pop"><span class="color-swatch-preview" data-preview-token="--color-pop"></span><span class="color-swatch-info"><span class="color-swatch-name">--color-pop</span><span class="color-swatch-value">Blush / emotion only</span><span class="color-swatch-copied">Copied</span></span></button>
             </div>
           </div>
         </section>
 
-        <!-- ═══ TYPOGRAPHY ═══ -->
-        <section id="typography" class="sg-section">
+        <section id="assets" class="sg-section">
           <div class="sg-section-header">
-            <h2 class="sg-section-title">✍️ Typography</h2>
+            <h2 class="sg-section-title">Assets Yuzu officiels</h2>
             <p class="sg-section-desc">
-              Three font stacks: <strong>Nunito</strong> (display),
-              <strong>Nunito Sans</strong> (body),
-              <strong>JetBrains Mono</strong> (code).
+              Trois usages publics seulement. Cela permet de garder la DA forte sans transformer chaque interface en galerie d illustrations.
             </p>
           </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Heading Scale</div>
-            <h1>h1 — The quick brown fox</h1>
-            <h2 class="mt-md">h2 — Jumps over the lazy dog</h2>
-            <h3 class="mt-md">h3 — Pack my box with five dozen</h3>
-            <h4 class="mt-md">h4 — Liquor jugs</h4>
-            <h5 class="mt-md">h5 — How vexingly quick daft zebras jump</h5>
-            <h6 class="mt-md">h6 — The five boxing wizards</h6>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Body & Inline</div>
-            <p>
-              Regular paragraph with <strong>bold</strong>, <em>italic</em>,
-              <a href="#">links</a>, and <code>inline code</code>. Font: Nunito Sans,
-              16px base, line-height 1.6.
-            </p>
-            <p class="mt-md text-muted">
-              Muted paragraph — secondary information uses
-              <code>--color-text-muted</code>.
-            </p>
-            <blockquote class="mt-md">
-              "Design identity is a system, not only decoration;
-              it drives product consistency." - OC Notes
-            </blockquote>
-            <pre class="mt-md"><code>// Code block — JetBrains Mono
-const agrume = 'Agrume visual identity';
-console.log(agrume);</code></pre>
+
+          <div class="sg-grid-3">
+            <article class="sg-asset-card"><h3>Portrait hero</h3><p>A utiliser pour les landing, les pages signature et les introductions de projet.</p><img class="character-portrait" src="img/altver/Yuzu_Joa-ver-banner.jpg" alt="Portrait horizontal pour hero" loading="lazy" /></article>
+            <article class="sg-asset-card"><h3>Mascot / chibi</h3><p>A utiliser pour les empty states, l onboarding, les confirmations et les moments plus humains.</p><img class="character-mascot" src="img/yuzuchibi_nobg.png" alt="Mascotte chibi de Yuzu" loading="lazy" /></article>
+            <article class="sg-asset-card"><h3>Micro stickers</h3><p>A utiliser en petite dose: badges affectifs, coins de cartes signatures, rappels visuels discrets.</p><div class="asset-cluster"><img class="character-sticker" src="img/yuzuchibi3_nobg.png" alt="Sticker chibi Yuzu signe paix" loading="lazy" /><img class="character-sticker" src="img/yuzuchibi1_nobg.png" alt="Sticker chibi Yuzu avec compagnon" loading="lazy" /></div></article>
           </div>
         </section>
 
-        <!-- ═══ SPACING ═══ -->
-        <section id="spacing" class="sg-section">
+        <section id="components" class="sg-section">
           <div class="sg-section-header">
-            <h2 class="sg-section-title">📐 Spacing Scale</h2>
+            <h2 class="sg-section-title">Composants et compositions</h2>
             <p class="sg-section-desc">
-              10-step scale from 2px to 96px. All spacing uses CSS custom
-              properties.
+              Ici on montre des blocs qui ressemblent vraiment a tes sites: hub de liens, toolbar, cards media, auth, tableau et empty states.
             </p>
           </div>
-          <div class="sg-demo">
-            <div class="sg-space-bar">
-              <span class="sg-space-label">--space-2xs</span>
-              <div class="sg-space-visual" style="width: 2px"></div>
-              <span class="sg-space-value">2px</span>
-            </div>
-            <div class="sg-space-bar">
-              <span class="sg-space-label">--space-xs</span>
-              <div class="sg-space-visual" style="width: 4px"></div>
-              <span class="sg-space-value">4px</span>
-            </div>
-            <div class="sg-space-bar">
-              <span class="sg-space-label">--space-sm</span>
-              <div class="sg-space-visual" style="width: 8px"></div>
-              <span class="sg-space-value">8px</span>
-            </div>
-            <div class="sg-space-bar">
-              <span class="sg-space-label">--space-md</span>
-              <div class="sg-space-visual" style="width: 16px"></div>
-              <span class="sg-space-value">16px</span>
-            </div>
-            <div class="sg-space-bar">
-              <span class="sg-space-label">--space-lg</span>
-              <div class="sg-space-visual" style="width: 24px"></div>
-              <span class="sg-space-value">24px</span>
-            </div>
-            <div class="sg-space-bar">
-              <span class="sg-space-label">--space-xl</span>
-              <div class="sg-space-visual" style="width: 32px"></div>
-              <span class="sg-space-value">32px</span>
-            </div>
-            <div class="sg-space-bar">
-              <span class="sg-space-label">--space-2xl</span>
-              <div class="sg-space-visual" style="width: 48px"></div>
-              <span class="sg-space-value">48px</span>
-            </div>
-            <div class="sg-space-bar">
-              <span class="sg-space-label">--space-3xl</span>
-              <div class="sg-space-visual" style="width: 64px"></div>
-              <span class="sg-space-value">64px</span>
-            </div>
-            <div class="sg-space-bar">
-              <span class="sg-space-label">--space-4xl</span>
-              <div class="sg-space-visual" style="width: 80px"></div>
-              <span class="sg-space-value">80px</span>
-            </div>
-            <div class="sg-space-bar">
-              <span class="sg-space-label">--space-5xl</span>
-              <div class="sg-space-visual" style="width: 96px"></div>
-              <span class="sg-space-value">96px</span>
-            </div>
-          </div>
-        </section>
 
-        <!-- ═══ BUTTONS ═══ -->
-        <section id="buttons" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">🔘 Buttons & Actions</h2>
-            <p class="sg-section-desc">
-              All variants, sizes, and states. Uses <code>.btn</code> base
-              class.
-            </p>
-          </div>
           <div class="sg-demo">
-            <div class="sg-demo-label">Variants</div>
-            <div class="sg-demo-row">
-              <button class="btn btn-primary">Primary</button>
-              <button class="btn btn-secondary">Secondary</button>
-              <button class="btn btn-ghost">Ghost</button>
-              <button class="btn btn-accent">Accent</button>
-              <button class="btn btn-danger">Danger</button>
+            <div class="sg-demo-label">Hub personnel / link cards</div>
+            <div class="link-stack">
+              <article class="link-card link-card-featured"><div class="link-card-identity"><strong>Twitch</strong><div class="link-card-meta">Hub live principal</div></div><p class="link-card-support">Live, clips, archives et entree rapide vers les contenus les plus chauds.</p><div class="link-card-end"><span class="quick-tag">En direct</span><span class="link-card-action">Entrer</span></div></article>
+              <article class="link-card"><div class="link-card-identity"><strong>Skins Library</strong><div class="link-card-meta">Catalogue editorial</div></div><p class="link-card-support">Collection, favoris et tags avec une lecture plus calme et plus hierarchisee.</p><div class="link-card-end"><span class="quick-tag">Collection</span><span class="link-card-action">Parcourir</span></div></article>
+              <article class="link-card"><div class="link-card-identity"><strong>Osurea Viewer</strong><div class="link-card-meta">Lagoon / utilitaire</div></div><p class="link-card-support">Analyse visuelle, quick launch et actions d outil plus directes.</p><div class="link-card-end"><span class="quick-tag">Tool</span><span class="link-card-action">Lancer</span></div></article>
             </div>
           </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Sizes</div>
-            <div class="sg-demo-row" style="align-items: flex-end">
-              <button class="btn btn-primary btn-xs">XS</button>
-              <button class="btn btn-primary btn-sm">Small</button>
-              <button class="btn btn-primary">Default</button>
-              <button class="btn btn-primary btn-lg">Large</button>
-              <button class="btn btn-primary btn-xl">XL</button>
-            </div>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">States</div>
-            <div class="sg-demo-row">
-              <button class="btn btn-primary">Normal</button>
-              <button class="btn btn-primary" disabled>Disabled</button>
-              <button class="btn btn-primary" aria-busy="true">Loading</button>
-              <button class="btn btn-primary btn-pill">Pill Shape</button>
-              <button class="btn btn-primary btn-icon" aria-label="Icon">
-                ✦
-              </button>
-            </div>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Button Group</div>
-            <div class="btn-group">
-              <button class="btn btn-secondary">Left</button>
-              <button class="btn btn-secondary">Center</button>
-              <button class="btn btn-secondary">Right</button>
-            </div>
-          </div>
-        </section>
 
-        <!-- ═══ FORMS ═══ -->
-        <section id="forms" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">📝 Forms</h2>
-            <p class="sg-section-desc">
-              Inputs, selects, checkboxes, switches, file upload, and validation
-              states.
-            </p>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Text Inputs</div>
-            <div class="form-group">
-              <label class="form-label">Default Input</label
-              ><input
-                type="text"
-                class="form-input"
-                placeholder="Enter text..."
-              />
-            </div>
-            <div class="form-group">
-              <label class="form-label form-label-required"
-                >Required Input</label
-              ><input
-                type="text"
-                class="form-input"
-                placeholder="Required field"
-              /><span class="form-hint">This field is required</span>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Password</label
-              ><input type="password" class="form-input" value="password123" />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Disabled</label
-              ><input
-                type="text"
-                class="form-input"
-                disabled
-                value="Disabled input"
-              />
-            </div>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Textarea & Select</div>
-            <div class="form-group">
-              <label class="form-label">Textarea</label
-              ><textarea
-                class="form-textarea"
-                placeholder="Write something..."
-              ></textarea>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Select</label
-              ><select class="form-select">
-                <option>Choose an option</option>
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-              </select>
-            </div>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Validation States</div>
-            <div class="form-group">
-              <label class="form-label">Valid</label
-              ><input
-                type="text"
-                class="form-input is-valid"
-                value="Correct value"
-              /><span class="form-success">Looks good!</span>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Invalid</label
-              ><input
-                type="text"
-                class="form-input is-invalid"
-                value="Wrong value"
-              /><span class="form-error">Please enter a valid value</span>
-            </div>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Checkbox, Radio & Switch</div>
-            <div class="sg-demo-row" style="align-items: flex-start">
+          <div class="surface-grid">
+            <article class="surface-card">
+              <div class="sg-demo-label">Toolbar + filtres</div>
+              <div class="toolbar-shell">
+                <div class="toolbar-primary">
+                  <div class="toolbar-search-shell"><span class="toolbar-label">Recherche principale</span><input class="form-input toolbar-search" type="search" placeholder="Chercher un skin, un tag, une map..." /></div>
+                  <div class="toolbar-actions"><button class="btn btn-primary" type="button">Rechercher</button><button class="btn btn-ghost" type="button">Reset</button></div>
+                </div>
+                <div class="toolbar-secondary"><span class="toolbar-label">Filtres actifs</span><div class="filter-row"><span class="filter-chip">Favourites</span><span class="filter-chip">HD</span><span class="filter-chip">DT</span><span class="filter-chip">Collection</span></div></div>
+              </div>
+            </article>
+            <article class="surface-card">
+              <div class="sg-demo-label">Alerts et feedback</div>
               <div class="sg-demo-col">
-                <label class="form-check"
-                  ><input
-                    type="checkbox"
-                    class="form-check-input"
-                    checked
-                  /><span class="form-check-label"
-                    >Checkbox checked</span
-                  ></label
-                >
-                <label class="form-check"
-                  ><input type="checkbox" class="form-check-input" /><span
-                    class="form-check-label"
-                    >Checkbox unchecked</span
-                  ></label
-                >
+                <div class="alert alert-success"><div><div class="alert-title">Succes</div>Le ton est clair, sans sur-decoration.</div></div>
+                <div class="alert alert-info"><div><div class="alert-title">Regle</div>Les accents decoratifs ne servent pas de petit texte.</div></div>
+                <div class="sg-demo-row"><span class="badge badge-solid">System</span><span class="badge badge-accent">Premium</span><span class="badge badge-success">Ready</span><span class="badge badge-warning">Review</span></div>
               </div>
+            </article>
+          </div>
+
+          <div class="surface-grid">
+            <article class="surface-card">
+              <div class="sg-demo-label">Tool table</div>
+              <div class="table-wrapper">
+                <table class="table table-striped">
+                  <thead><tr><th>Projet</th><th>Etat</th><th>Accent</th><th>Usage personnage</th></tr></thead>
+                  <tbody>
+                    <tr><td>Yuzuctus</td><td>Landing</td><td>Blush + mint</td><td>Hero + cartes signature</td></tr>
+                    <tr><td>Osurea</td><td>Tool</td><td>Lagoon</td><td>Empty state uniquement</td></tr>
+                    <tr><td>Skins</td><td>Library</td><td>Gold</td><td>Hero + rappels</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+            <article class="surface-card">
+              <div class="sg-demo-label">Auth + empty state</div>
               <div class="sg-demo-col">
-                <label class="form-check"
-                  ><input
-                    type="radio"
-                    name="radio-demo"
-                    class="form-check-input"
-                    checked
-                  /><span class="form-check-label">Radio A</span></label
-                >
-                <label class="form-check"
-                  ><input
-                    type="radio"
-                    name="radio-demo"
-                    class="form-check-input"
-                  /><span class="form-check-label">Radio B</span></label
-                >
+                <label class="form-group"><span class="form-label form-label-required">Email</span><input class="form-input" type="email" placeholder="yuzu@example.com" /></label>
+                <label class="form-group"><span class="form-label">Mot de passe</span><input class="form-input" type="password" placeholder="********" /></label>
+                <div class="sg-demo-row"><button class="btn btn-primary" type="button">Se connecter</button><button class="btn btn-ghost" type="button">Magic link</button></div>
+                <div class="empty-state"><img class="empty-state-visual" src="img/yuzuchibi_nobg.png" alt="Mascotte Yuzu pour un empty state" loading="lazy" /><p>Quand il n y a rien a afficher, la mascotte peut aider. Quand il y a deja beaucoup d information, elle doit s effacer.</p></div>
               </div>
-              <div class="sg-demo-col">
-                <label class="form-switch"
-                  ><input
-                    type="checkbox"
-                    class="form-switch-input"
-                    checked
-                  /><span class="form-check-label">Switch on</span></label
-                >
-                <label class="form-switch"
-                  ><input type="checkbox" class="form-switch-input" /><span
-                    class="form-check-label"
-                    >Switch off</span
-                  ></label
-                >
-              </div>
-            </div>
+            </article>
           </div>
+
           <div class="sg-demo">
-            <div class="sg-demo-label">File Upload & Input Group</div>
-            <div class="file-upload" style="position: relative">
-              <div class="file-upload-icon">📁</div>
-              <div class="file-upload-text">
-                <strong>Click to upload</strong> or drag and drop
-              </div>
-              <div class="file-upload-hint">
-                SVG, PNG, JPG or GIF (max. 10MB)
-              </div>
-              <input type="file" />
-            </div>
-            <div class="input-group mt-lg">
-              <input type="text" class="form-input" placeholder="Search..." />
-              <button class="btn btn-primary">Search</button>
-            </div>
+            <div class="sg-demo-label">Modal et toast demo</div>
+            <div class="sg-demo-row"><button class="btn btn-primary" type="button" data-modal-open="demoModalBackdrop">Open modal</button><button class="btn btn-secondary" id="demoToastBtn" type="button">Show toast</button></div>
           </div>
         </section>
 
-        <!-- ═══ CARDS ═══ -->
-        <section id="cards" class="sg-section">
+        <section id="pages" class="sg-section">
           <div class="sg-section-header">
-            <h2 class="sg-section-title">🃏 Cards</h2>
-            <p class="sg-section-desc">
-              Multiple variants: default, interactive, elevated, outlined,
-              featured, compact, flat.
-            </p>
+            <h2 class="sg-section-title">Pages examples a ouvrir directement</h2>
+            <p class="sg-section-desc">Ces pages servent a juger la charte dans des contextes reels. Elles doivent etre ouvertes individuellement, comme des mini maquettes vivantes.</p>
           </div>
-          <div class="card-grid">
-            <div class="card card-interactive">
-              <div class="card-body">
-                <h4 class="mb-xs">Interactive Card</h4>
-                <p class="text-sm text-muted">
-                  Hover to see the lift effect and glow shadow.
-                </p>
-              </div>
-              <div class="card-footer">
-                <span class="badge badge-primary">Interactive</span>
-              </div>
-            </div>
-            <div class="card card-elevated">
-              <div class="card-body">
-                <h4 class="mb-xs">Elevated Card</h4>
-                <p class="text-sm text-muted">
-                  Uses elevated background with medium shadow.
-                </p>
-              </div>
-              <div class="card-footer">
-                <span class="badge badge-neutral">Elevated</span>
-              </div>
-            </div>
-            <div class="card card-outlined">
-              <div class="card-body">
-                <h4 class="mb-xs">Outlined Card</h4>
-                <p class="text-sm text-muted">
-                  Transparent background with visible border.
-                </p>
-              </div>
-              <div class="card-footer">
-                <span class="badge badge-accent">Outlined</span>
-              </div>
-            </div>
-            <div class="card card-featured">
-              <div class="card-body">
-                <h4 class="mb-xs">Featured Card</h4>
-                <p class="text-sm text-muted">
-                  Primary glow border and shadow. Use for highlights.
-                </p>
-              </div>
-              <div class="card-footer">
-                <span class="badge badge-success">Featured</span>
-              </div>
-            </div>
-            <div class="card card-compact">
-              <div class="card-body">
-                <h4 class="mb-xs">Compact</h4>
-                <p class="text-sm text-muted">
-                  Reduced padding for dense layouts.
-                </p>
-              </div>
-            </div>
-            <div class="card card-flat">
-              <div class="card-body">
-                <h4 class="mb-xs">Flat Card</h4>
-                <p class="text-sm text-muted">No border, no shadow. Minimal.</p>
-              </div>
-            </div>
+
+          <div class="preview-grid">
+            <article class="preview-card"><div class="preview-kicker">Landing</div><h3>Page d accueil / hub perso</h3><p>Melange de hero signature, cartes bento, liens principaux et mise en avant de tes projets.</p><div class="preview-card-actions"><a class="btn btn-primary btn-sm" href="examples/landing.html">Ouvrir</a></div></article>
+            <article class="preview-card"><div class="preview-kicker">Connexion</div><h3>Page auth</h3><p>Une maquette de connexion plus premium, avec duo carte utile + visuel identitaire.</p><div class="preview-card-actions"><a class="btn btn-primary btn-sm" href="examples/login.html">Ouvrir</a></div></article>
+            <article class="preview-card"><div class="preview-kicker">Tool</div><h3>Dashboard utilitaire</h3><p>Toolbar, KPIs, panels et tableau pour representer Osurea ou Zest sans surcharge visuelle.</p><div class="preview-card-actions"><a class="btn btn-primary btn-sm" href="examples/tool-dashboard.html">Ouvrir</a></div></article>
+            <article class="preview-card"><div class="preview-kicker">Library</div><h3>Catalogue / collection</h3><p>Sidebar de filtres, cartes media, hero editorial et accent or pour les pages de browse.</p><div class="preview-card-actions"><a class="btn btn-primary btn-sm" href="examples/library.html">Ouvrir</a></div></article>
           </div>
         </section>
 
-        <!-- ═══ BADGES ═══ -->
-        <section id="badges" class="sg-section">
+        <section id="rules" class="sg-section">
           <div class="sg-section-header">
-            <h2 class="sg-section-title">🏷️ Badges & Status</h2>
-            <p class="sg-section-desc">
-              Color variants, solid, outlined, dot, and counter styles.
-            </p>
+            <h2 class="sg-section-title">Regles pour humain et IA</h2>
+            <p class="sg-section-desc">La charte doit etre assez claire pour un designer ou un dev humain, mais aussi assez structuree pour guider un agent IA sans ambiguite.</p>
           </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Color Variants</div>
-            <div class="sg-demo-row">
-              <span class="badge badge-primary">Primary</span>
-              <span class="badge badge-accent">Accent</span>
-              <span class="badge badge-success">Success</span>
-              <span class="badge badge-warning">Warning</span>
-              <span class="badge badge-error">Error</span>
-              <span class="badge badge-neutral">Neutral</span>
-            </div>
+
+          <div class="rule-grid">
+            <article class="rule-card"><div class="rule-card-head"><span class="eyebrow">Human flow</span><h3>Checklist humain</h3></div><p class="rule-card-intro">Le projet doit d abord se lire comme une vraie interface, puis seulement comme une direction artistique.</p><ul class="sg-list"><li>Commencer par le type de projet reel, pas par la couleur.</li><li>Utiliser les encres pour le texte, les accents pour les surfaces et le focus.</li><li>Placer Yuzu au hero, en empty state ou en petit rappel, jamais partout.</li><li>Verifier que la page reste bonne meme sans l illustration.</li></ul></article>
+            <article class="rule-card"><div class="rule-card-head"><span class="eyebrow">AI guardrails</span><h3>Checklist IA</h3></div><p class="rule-card-intro">L IA doit suivre le shell, les roles couleur et la hierarchie avant toute personnalisation locale.</p><ul class="sg-list"><li>Conserver la base commune avant toute personnalisation.</li><li>Ne pas inventer de nouvelles couleurs hors tokens.</li><li>Ne pas transformer le style en template startup generique.</li><li>Donner la priorite a la lisibilite, aux bordures douces et aux cartes bien structurees.</li></ul></article>
           </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Solid & Outlined</div>
-            <div class="sg-demo-row">
-              <span class="badge badge-solid">Solid Primary</span>
-              <span class="badge badge-solid badge-success">Solid Success</span>
-              <span class="badge badge-solid badge-error">Solid Error</span>
-              <span class="badge badge-primary badge-outlined">Outlined</span>
-              <span class="badge badge-accent badge-outlined">Outlined</span>
-            </div>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Dot, Counter & Status</div>
-            <div class="sg-demo-row">
-              <span class="badge badge-success badge-dot">Online</span>
-              <span class="badge badge-warning badge-dot">Away</span>
-              <span class="badge badge-error badge-dot">Offline</span>
-              <span class="badge-counter">5</span>
-              <span
-                class="badge-counter"
-                style="background-color: var(--color-primary)"
-                >99+</span
-              >
-              <span
-                class="status-dot status-dot-online"
-                data-tooltip="Online"
-              ></span>
-              <span
-                class="status-dot status-dot-away"
-                data-tooltip="Away"
-              ></span>
-              <span
-                class="status-dot status-dot-offline"
-                data-tooltip="Offline"
-              ></span>
-            </div>
-          </div>
+
+          <pre class="ai-contract">PROJECT TYPE: social hub | tool dashboard | library catalog
+UMBRELLA BRAND: Yuzuctus
+CHARACTER USAGE: portrait hero, mascot empty state, micro sticker only
+TEXT RULE: use ink tokens for readable copy, never pastel accents for dense text
+STYLE RULE: soft rounded shells, clean borders, authored layout, no random gradients
+ACCENT RULE: mint for action, lagoon for tools, gold for highlight, blush for emotion only
+ANTI AI RULE: no generic SaaS look, no purple default, no empty visual noise</pre>
         </section>
 
-        <!-- ═══ ALERTS & TOASTS ═══ -->
-        <section id="alerts" class="sg-section">
+        <section id="shipping" class="sg-section">
           <div class="sg-section-header">
-            <h2 class="sg-section-title">🔔 Alerts & Toasts</h2>
-            <p class="sg-section-desc">
-              Inline alerts and dismissable toast notifications.
-            </p>
+            <h2 class="sg-section-title">Livraison et docs</h2>
+            <p class="sg-section-desc">Le repo ne sert pas seulement de UI kit. Il sert de reference officielle pour reconstruire les projets et expliquer la direction a quelqu un d autre.</p>
           </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Inline Alerts</div>
-            <div class="alert alert-info mb-md">
-              <span>ℹ</span>
-              <div>
-                <div class="alert-title">Information</div>
-                This is an informational alert using <code>.alert-info</code>.
-              </div>
-            </div>
-            <div class="alert alert-success mb-md">
-              <span>✓</span>
-              <div>
-                <div class="alert-title">Success</div>
-                Operation completed successfully!
-              </div>
-            </div>
-            <div class="alert alert-warning mb-md">
-              <span>⚠</span>
-              <div>
-                <div class="alert-title">Warning</div>
-                Please review before proceeding.
-              </div>
-            </div>
-            <div class="alert alert-error">
-              <span>✕</span>
-              <div>
-                <div class="alert-title">Error</div>
-                Something went wrong. Please try again.
-              </div>
-            </div>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Live Toast Demo</div>
-            <div class="sg-demo-row">
-              <button
-                class="btn btn-primary btn-sm"
-                onclick="showToast('success')"
-              >
-                Success Toast
-              </button>
-              <button
-                class="btn btn-secondary btn-sm"
-                onclick="showToast('info')"
-              >
-                Info Toast
-              </button>
-              <button
-                class="btn btn-accent btn-sm"
-                onclick="showToast('warning')"
-              >
-                Warning Toast
-              </button>
-              <button
-                class="btn btn-danger btn-sm"
-                onclick="showToast('error')"
-              >
-                Error Toast
-              </button>
-            </div>
+
+          <div class="sg-grid-3">
+            <article class="sg-doc-card"><h3>README habille</h3><p>Version longue, structuree et stylee pour lire la reference projet dans de bonnes conditions et reutiliser le meme rendu sur les futurs contrats.</p><div class="sg-doc-card-actions"><a class="btn btn-ghost btn-sm" href="readme.html">Ouvrir</a></div></article>
+            <article class="sg-doc-card"><h3>design_contract.json</h3><p>Contrat machine lisible avec roles couleurs, projets cibles, usages du personnage et contraintes de style.</p></article>
+            <article class="sg-doc-card"><h3>Pages examples</h3><p>Mini maquettes vivantes pour juger le rendu reel avant de toucher aux vrais sites.</p><div class="sg-doc-card-actions"><a class="btn btn-ghost btn-sm" href="examples/library.html">Voir la library</a><a class="btn btn-ghost btn-sm" href="examples/tool-dashboard.html">Voir le tool</a></div></article>
           </div>
         </section>
-
-        <!-- ═══ MODALS ═══ -->
-        <section id="modals" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">💬 Modals</h2>
-            <p class="sg-section-desc">
-              Overlay dialogs with header, body, and footer. Click backdrop or ×
-              to close.
-            </p>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-row">
-              <button class="btn btn-primary" data-modal-open="demoModal">
-                Open Modal
-              </button>
-              <button class="btn btn-secondary" data-modal-open="demoModalLg">
-                Large Modal
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <!-- Modal instances -->
-        <div class="modal-backdrop" id="demoModal">
-          <div
-            class="modal"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="demoModalTitle"
-          >
-            <div class="modal-header">
-              <h3 class="modal-title" id="demoModalTitle">Agrume Modal</h3>
-              <button class="modal-close" aria-label="Close">&times;</button>
-            </div>
-            <div class="modal-body">
-              <p>
-                This is a demo modal showcasing the Agrume design system. All
-                styles come from <code>components/modal.css</code>.
-              </p>
-              <p class="mt-md text-muted text-sm">
-                Click the backdrop or the × button to close.
-              </p>
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-ghost" data-modal-close>Cancel</button
-              ><button class="btn btn-primary" data-modal-close>Confirm</button>
-            </div>
-          </div>
-        </div>
-        <div class="modal-backdrop" id="demoModalLg">
-          <div
-            class="modal modal-lg"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="demoModalLgTitle"
-          >
-            <div class="modal-header">
-              <h3 class="modal-title" id="demoModalLgTitle">Large Modal</h3>
-              <button class="modal-close" aria-label="Close">&times;</button>
-            </div>
-            <div class="modal-body">
-              <p>
-                This is a larger modal variant using
-                <code>.modal-lg</code> (max-width: 720px).
-              </p>
-              <div class="alert alert-info mt-md">
-                <span>ℹ</span>
-                <div>
-                  Other sizes: <code>.modal-sm</code> (400px),
-                  <code>.modal-xl</code> (960px),
-                  <code>.modal-fullscreen</code>.
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-ghost" data-modal-close>Close</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- ═══ TABLES ═══ -->
-        <section id="tables" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">📊 Tables</h2>
-            <p class="sg-section-desc">
-              Striped tables with hover state. Class:
-              <code>.table .table-striped</code>
-            </p>
-          </div>
-          <div class="sg-demo" style="padding: 0; overflow: hidden">
-            <div class="table-wrapper" style="border: none">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Role</th>
-                    <th>Status</th>
-                    <th>Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Nori</td>
-                    <td>Designer</td>
-                    <td>
-                      <span class="badge badge-success badge-sm">Active</span>
-                    </td>
-                    <td>2026-03-01</td>
-                  </tr>
-                  <tr>
-                    <td>Mint-Lagoon</td>
-                    <td>Developer</td>
-                    <td>
-                      <span class="badge badge-success badge-sm">Active</span>
-                    </td>
-                    <td>2026-02-28</td>
-                  </tr>
-                  <tr>
-                    <td>Cactus</td>
-                    <td>PM</td>
-                    <td>
-                      <span class="badge badge-warning badge-sm">Away</span>
-                    </td>
-                    <td>2026-02-25</td>
-                  </tr>
-                  <tr>
-                    <td>Canopy</td>
-                    <td>QA</td>
-                    <td>
-                      <span class="badge badge-error badge-sm">Offline</span>
-                    </td>
-                    <td>2026-02-20</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        <!-- ═══ NAVBAR ═══ -->
-        <section id="navbar" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">🧭 Navbar</h2>
-            <p class="sg-section-desc">
-              Static demo of the navbar component. In production, uses
-              <code>position: fixed</code>.
-            </p>
-          </div>
-          <div
-            class="sg-demo"
-            style="
-              padding: 0;
-              overflow: hidden;
-              border-radius: var(--radius-card);
-            "
-          >
-            <nav
-              class="navbar"
-              style="
-                position: relative;
-                border-radius: var(--radius-card) var(--radius-card) 0 0;
-              "
-            >
-              <a class="navbar-brand" href="#">Agrume</a>
-              <ul class="navbar-nav" style="display: flex">
-                <li><a class="nav-link active" href="#">Dashboard</a></li>
-                <li><a class="nav-link" href="#">Links</a></li>
-                <li><a class="nav-link" href="#">Settings</a></li>
-              </ul>
-              <div class="navbar-actions">
-                <span class="text-sm text-muted">admin</span>
-                <button class="btn btn-ghost btn-sm">Logout</button>
-              </div>
-            </nav>
-          </div>
-        </section>
-
-        <!-- ═══ TABS ═══ -->
-        <section id="tabs" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">📑 Tabs</h2>
-            <p class="sg-section-desc">
-              Interactive tabs with default and pill variants.
-            </p>
-          </div>
-          <div class="sg-demo" data-tabs>
-            <div class="sg-demo-label">Default Tabs</div>
-            <div class="tabs">
-              <button
-                class="tab active"
-                data-target="tabPanel1"
-                aria-selected="true"
-              >
-                Overview
-              </button>
-              <button class="tab" data-target="tabPanel2" aria-selected="false">
-                Features
-              </button>
-              <button class="tab" data-target="tabPanel3" aria-selected="false">
-                Code
-              </button>
-            </div>
-            <div class="tab-panel active" id="tabPanel1" data-active="true">
-              <p>
-                This is the <strong>Overview</strong> tab panel. Tabs use
-                <code>.tabs</code> container and <code>.tab</code> buttons.
-              </p>
-            </div>
-            <div class="tab-panel" id="tabPanel2">
-              <p>
-                This is the <strong>Features</strong> panel. Active tab gets
-                <code>.active</code> class and
-                <code>aria-selected="true"</code>.
-              </p>
-            </div>
-            <div class="tab-panel" id="tabPanel3">
-              <pre><code>.tabs { display: flex; border-bottom: 1px solid var(--color-border-light); }
-.tab.active { color: var(--color-primary); border-bottom-color: var(--color-primary); }</code></pre>
-            </div>
-          </div>
-          <div class="sg-demo" data-tabs>
-            <div class="sg-demo-label">Pill Tabs</div>
-            <div class="tabs tabs-pill">
-              <button
-                class="tab active"
-                data-target="pillPanel1"
-                aria-selected="true"
-              >
-                Tab 1
-              </button>
-              <button
-                class="tab"
-                data-target="pillPanel2"
-                aria-selected="false"
-              >
-                Tab 2
-              </button>
-              <button
-                class="tab"
-                data-target="pillPanel3"
-                aria-selected="false"
-              >
-                Tab 3
-              </button>
-            </div>
-            <div class="tab-panel active" id="pillPanel1" data-active="true">
-              <p class="mt-md">
-                Pill variant uses <code>.tabs-pill</code>. Active tab gets a
-                solid primary background.
-              </p>
-            </div>
-            <div class="tab-panel" id="pillPanel2">
-              <p class="mt-md">Second pill tab content.</p>
-            </div>
-            <div class="tab-panel" id="pillPanel3">
-              <p class="mt-md">Third pill tab content.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- ═══ BREADCRUMBS ═══ -->
-        <section id="breadcrumbs" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">🍞 Breadcrumbs</h2>
-            <p class="sg-section-desc">
-              Navigation hierarchy with separator. Uses
-              <code>.breadcrumb</code>.
-            </p>
-          </div>
-          <div class="sg-demo">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a class="breadcrumb-link" href="#">Home</a>
-              </li>
-              <li class="breadcrumb-item">
-                <a class="breadcrumb-link" href="#">Components</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                Breadcrumbs
-              </li>
-            </ol>
-          </div>
-        </section>
-
-        <!-- ═══ PAGINATION ═══ -->
-        <section id="pagination" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">📖 Pagination</h2>
-            <p class="sg-section-desc">
-              Page navigation with active state and ellipsis.
-            </p>
-          </div>
-          <div class="sg-demo">
-            <ul class="pagination">
-              <li class="pagination-item">
-                <a class="pagination-link" aria-disabled="true">‹</a>
-              </li>
-              <li class="pagination-item">
-                <a class="pagination-link active" aria-current="page">1</a>
-              </li>
-              <li class="pagination-item"><a class="pagination-link">2</a></li>
-              <li class="pagination-item"><a class="pagination-link">3</a></li>
-              <li class="pagination-item">
-                <span class="pagination-ellipsis">…</span>
-              </li>
-              <li class="pagination-item"><a class="pagination-link">12</a></li>
-              <li class="pagination-item"><a class="pagination-link">›</a></li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- ═══ ACCORDION ═══ -->
-        <section id="accordion" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">🪗 Accordion</h2>
-            <p class="sg-section-desc">
-              Expandable content sections. Click a trigger to toggle.
-            </p>
-          </div>
-          <div class="sg-demo" style="padding: 0; overflow: hidden">
-            <div class="accordion">
-              <div class="accordion-item open">
-                <button class="accordion-trigger">
-                  What is Agrume? <span class="accordion-icon">▾</span>
-                </button>
-                <div class="accordion-content">
-                  Agrume is an OC-driven design system with mint, lagoon, gold, and blush
-                  colors. It's dark-first, responsive, and accessible.
-                </div>
-              </div>
-              <div class="accordion-item">
-                <button class="accordion-trigger">
-                  How many components? <span class="accordion-icon">▾</span>
-                </button>
-                <div class="accordion-content">
-                  Agrume includes 30+ components: buttons, cards, forms, modals,
-                  tables, tabs, accordion, and more. Plus 4 new components:
-                  stepper, range slider, rating, and color swatch.
-                </div>
-              </div>
-              <div class="accordion-item">
-                <button class="accordion-trigger">
-                  Is it dark mode by default?
-                  <span class="accordion-icon">▾</span>
-                </button>
-                <div class="accordion-content">
-                  Yes! The <code>:root</code> selector defines dark mode. Light
-                  mode is activated via
-                  <code>[data-theme="light"]</code> attribute on the HTML
-                  element.
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ═══ AVATARS ═══ -->
-        <section id="avatars" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">👤 Avatars</h2>
-            <p class="sg-section-desc">
-              Sizes from XS to 2XL, with status indicators and groups.
-            </p>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Sizes</div>
-            <div class="sg-demo-row">
-              <div class="avatar avatar-xs">Z</div>
-              <div class="avatar avatar-sm">Z</div>
-              <div class="avatar">Z</div>
-              <div class="avatar avatar-lg">Z</div>
-              <div class="avatar avatar-xl">Z</div>
-            </div>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Status & Group</div>
-            <div class="sg-demo-row">
-              <div class="avatar avatar-status online">Y</div>
-              <div class="avatar avatar-status away">M</div>
-              <div class="avatar avatar-status busy">C</div>
-              <div style="margin-left: var(--space-xl)">
-                <div class="avatar-group">
-                  <div class="avatar">A</div>
-                  <div class="avatar">B</div>
-                  <div class="avatar">C</div>
-                  <div class="avatar avatar-overflow">+5</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ═══ LOADERS ═══ -->
-        <section id="loaders" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">⏳ Loaders & Skeletons</h2>
-            <p class="sg-section-desc">
-              Spinners, pulse dots, and shimmer skeletons.
-            </p>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Spinners</div>
-            <div class="sg-demo-row">
-              <div class="spinner spinner-sm"></div>
-              <div class="spinner"></div>
-              <div class="spinner spinner-lg"></div>
-              <div class="spinner spinner-xl"></div>
-            </div>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Skeleton Loading</div>
-            <div style="max-width: 300px">
-              <div class="skeleton skeleton-heading"></div>
-              <div class="skeleton skeleton-text"></div>
-              <div class="skeleton skeleton-text"></div>
-              <div class="skeleton skeleton-text" style="width: 70%"></div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ═══ TOOLTIPS ═══ -->
-        <section id="tooltips" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">💡 Tooltips</h2>
-            <p class="sg-section-desc">
-              CSS-only tooltips via <code>data-tooltip</code> attribute. Hover
-              to reveal.
-            </p>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-row">
-              <button
-                class="btn btn-secondary btn-sm"
-                data-tooltip="Tooltip on top"
-              >
-                Top (default)
-              </button>
-              <button
-                class="btn btn-secondary btn-sm"
-                data-tooltip="Tooltip on bottom"
-                data-tooltip-position="bottom"
-              >
-                Bottom
-              </button>
-              <button
-                class="btn btn-secondary btn-sm"
-                data-tooltip="Tooltip on left"
-                data-tooltip-position="left"
-              >
-                Left
-              </button>
-              <button
-                class="btn btn-secondary btn-sm"
-                data-tooltip="Tooltip on right"
-                data-tooltip-position="right"
-              >
-                Right
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <!-- ═══ DRAG & DROP ═══ -->
-        <section id="dragdrop" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">🖐️ Drag & Drop</h2>
-            <p class="sg-section-desc">
-              Sortable list using HTML5 Drag API. Grab an item and reorder.
-            </p>
-          </div>
-          <div class="sg-demo">
-            <div class="drag-list" id="dragDemoList" style="max-width: 400px">
-              <div class="drag-item">
-                <span class="drag-handle drag-handle-dots"></span
-                ><span>🌿 Design Tokens</span>
-              </div>
-              <div class="drag-item">
-                <span class="drag-handle drag-handle-dots"></span
-                ><span>🎨 Color Palette</span>
-              </div>
-              <div class="drag-item">
-                <span class="drag-handle drag-handle-dots"></span
-                ><span>✍️ Typography</span>
-              </div>
-              <div class="drag-item">
-                <span class="drag-handle drag-handle-dots"></span
-                ><span>🔘 Buttons</span>
-              </div>
-              <div class="drag-item">
-                <span class="drag-handle drag-handle-dots"></span
-                ><span>📝 Forms</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ═══ PROGRESS BARS ═══ -->
-        <section id="progress" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">📊 Progress Bars</h2>
-            <p class="sg-section-desc">
-              Determinate and indeterminate progress indicators.
-              <span class="badge badge-accent badge-sm">New</span>
-            </p>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Determinate</div>
-            <div class="sg-demo-col">
-              <div class="progress">
-                <div class="progress-bar" style="width: 25%"></div>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 50%"></div>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" style="width: 75%"></div>
-              </div>
-              <div class="progress">
-                <div
-                  class="progress-bar progress-bar-success"
-                  style="width: 100%"
-                ></div>
-              </div>
-            </div>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Variants & Sizes</div>
-            <div class="sg-demo-col">
-              <div class="progress progress-sm">
-                <div class="progress-bar" style="width: 60%"></div>
-              </div>
-              <div class="progress">
-                <div
-                  class="progress-bar progress-bar-warning"
-                  style="width: 45%"
-                ></div>
-              </div>
-              <div class="progress progress-lg">
-                <div
-                  class="progress-bar progress-bar-error"
-                  style="width: 30%"
-                ></div>
-              </div>
-              <div class="progress progress-indeterminate">
-                <div class="progress-bar progress-bar-accent"></div>
-              </div>
-            </div>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Animated Demo</div>
-            <div class="progress mb-md">
-              <div
-                class="progress-bar"
-                id="progressDemoBar"
-                style="width: 0%; transition: width 0.3s ease"
-              ></div>
-            </div>
-            <button class="btn btn-primary btn-sm" id="progressDemoBtn">
-              Animate Progress
-            </button>
-          </div>
-        </section>
-
-        <!-- ═══ STEPPER ═══ -->
-        <section id="stepper" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">🪜 Stepper</h2>
-            <p class="sg-section-desc">
-              Horizontal step indicator with active and completed states.
-              <span class="badge badge-accent badge-sm">New</span>
-            </p>
-          </div>
-          <div class="sg-demo">
-            <div class="stepper" id="stepperDemo">
-              <div class="step active">
-                <div class="step-number">1</div>
-                <div class="step-label">Account</div>
-              </div>
-              <div class="step-connector"></div>
-              <div class="step">
-                <div class="step-number">2</div>
-                <div class="step-label">Profile</div>
-              </div>
-              <div class="step-connector"></div>
-              <div class="step">
-                <div class="step-number">3</div>
-                <div class="step-label">Settings</div>
-              </div>
-              <div class="step-connector"></div>
-              <div class="step">
-                <div class="step-number">4</div>
-                <div class="step-label">Complete</div>
-              </div>
-            </div>
-            <div class="sg-demo-row mt-lg">
-              <button class="btn btn-ghost btn-sm" onclick="stepperPrev()">
-                ← Previous
-              </button>
-              <button class="btn btn-primary btn-sm" onclick="stepperNext()">
-                Next →
-              </button>
-              <button class="btn btn-secondary btn-sm" onclick="stepperReset()">
-                Reset
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <!-- ═══ RANGE SLIDER ═══ -->
-        <section id="range" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">🎚️ Range Slider</h2>
-            <p class="sg-section-desc">
-              Custom-styled range input with live value display.
-              <span class="badge badge-accent badge-sm">New</span>
-            </p>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Default</div>
-            <div class="range-slider" style="max-width: 400px">
-              <input
-                type="range"
-                class="range-slider-input"
-                min="0"
-                max="100"
-                value="50"
-              />
-              <div class="range-slider-labels">
-                <span>0</span>
-                <div class="range-slider-value">50</div>
-                <span>100</span>
-              </div>
-            </div>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Accent Variant</div>
-            <div
-              class="range-slider range-slider-accent"
-              style="max-width: 400px"
-            >
-              <input
-                type="range"
-                class="range-slider-input"
-                min="0"
-                max="100"
-                value="75"
-              />
-              <div class="range-slider-labels">
-                <span>0</span>
-                <div class="range-slider-value">75</div>
-                <span>100</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ═══ RATING ═══ -->
-        <section id="rating" class="sg-section">
-          <div class="sg-section-header">
-            <h2 class="sg-section-title">⭐ Rating Stars</h2>
-            <p class="sg-section-desc">
-              Interactive CSS-only star rating using the radio hack.
-              <span class="badge badge-accent badge-sm">New</span>
-            </p>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Interactive</div>
-            <div class="rating">
-              <input type="radio" id="star5" name="rating1" value="5" /><label
-                for="star5"
-                >★</label
-              >
-              <input
-                type="radio"
-                id="star4"
-                name="rating1"
-                value="4"
-                checked
-              /><label for="star4">★</label>
-              <input type="radio" id="star3" name="rating1" value="3" /><label
-                for="star3"
-                >★</label
-              >
-              <input type="radio" id="star2" name="rating1" value="2" /><label
-                for="star2"
-                >★</label
-              >
-              <input type="radio" id="star1" name="rating1" value="1" /><label
-                for="star1"
-                >★</label
-              >
-            </div>
-          </div>
-          <div class="sg-demo">
-            <div class="sg-demo-label">Read-only (3/5)</div>
-            <div class="rating rating-readonly">
-              <input
-                type="radio"
-                id="ro5"
-                name="rating2"
-                value="5"
-                disabled
-              /><label for="ro5">★</label>
-              <input
-                type="radio"
-                id="ro4"
-                name="rating2"
-                value="4"
-                disabled
-              /><label for="ro4">★</label>
-              <input
-                type="radio"
-                id="ro3"
-                name="rating2"
-                value="3"
-                disabled
-                checked
-              /><label for="ro3">★</label>
-              <input
-                type="radio"
-                id="ro2"
-                name="rating2"
-                value="2"
-                disabled
-              /><label for="ro2">★</label>
-              <input
-                type="radio"
-                id="ro1"
-                name="rating2"
-                value="1"
-                disabled
-              /><label for="ro1">★</label>
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- .sg-content -->
+      </main>
     </div>
-    <!-- .sg-main -->
 
-    <!-- ═══ Toast Container ═══ -->
     <div class="toast-container" id="toastContainer"></div>
+    <div class="sr-only" id="srAnnouncements" aria-live="polite" aria-atomic="true"></div>
 
-    <!-- ═══ Back to Top ═══ -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <polyline points="18 15 12 9 6 15" />
-      </svg>
-    </button>
+    <div class="modal-backdrop" id="demoModalBackdrop">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle" tabindex="-1">
+        <div class="modal-header"><h3 class="modal-title" id="demoModalTitle">Contrat d interaction partage</h3><button class="modal-close" type="button" aria-label="Fermer">x</button></div>
+        <div class="modal-body"><p>Ce modal montre la base commune a garder sur tous les projets: focus trap, fermeture Escape, restauration du focus et surfaces lisibles.</p><label class="form-group mt-lg"><span class="form-label">Champ exemple</span><input class="form-input" type="text" placeholder="Le focus doit rester dans le modal" /></label></div>
+        <div class="modal-footer"><button class="btn btn-ghost" type="button" data-modal-close>Cancel</button><button class="btn btn-primary" type="button" data-modal-close>Confirm</button></div>
+      </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15" /></svg></button>
 
     <script src="js/styleguide.js"></script>
   </body>
 </html>
-
-
-

@@ -1,14 +1,14 @@
-/* ═══════════════════════════════════════════════════
-   ZEST — Buttons
-   .btn + variants (primary, secondary, ghost, accent, danger)
-   + sizes (xs, sm, lg, xl) + shapes + states
-   ═══════════════════════════════════════════════════ */
+/* ===================================================
+   YUZUCTUS - Buttons
+   Primary, secondary, ghost, accent, danger
+   =================================================== */
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
+  min-height: var(--touch-target);
   padding: var(--space-sm) var(--space-lg);
   font-family: var(--font-body);
   font-size: var(--text-sm);
@@ -30,134 +30,156 @@
     transform var(--transition-fast);
 }
 
-/* Primary */
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-on-primary);
   border-color: var(--color-primary);
-  box-shadow: var(--shadow-btn);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, white 14%, transparent),
+    var(--shadow-btn);
 }
+
 .btn-primary:hover {
   background-color: var(--color-primary-hover);
   border-color: var(--color-primary-hover);
   box-shadow: var(--shadow-btn-hover);
   transform: translateY(-1px);
 }
+
 .btn-primary:active {
   transform: translateY(0);
-  box-shadow: var(--shadow-xs);
+  box-shadow: var(--shadow-press);
 }
 
-/* Secondary (outlined) */
 .btn-secondary {
-  background-color: transparent;
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+  background-color: color-mix(in srgb, var(--color-bg-elevated) 88%, transparent);
+  color: var(--color-link);
+  border-color: var(--color-border-strong);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, white 8%, transparent);
 }
+
 .btn-secondary:hover {
   background-color: var(--color-primary-alpha-10);
+  border-color: var(--color-primary);
   box-shadow: var(--shadow-sm);
   transform: translateY(-1px);
 }
+
 .btn-secondary:active {
   transform: translateY(0);
+  box-shadow: var(--shadow-press);
 }
 
-/* Ghost */
 .btn-ghost {
-  background-color: transparent;
+  background-color: color-mix(in srgb, var(--color-bg-elevated) 80%, transparent);
   color: var(--color-text-muted);
-  border-color: transparent;
-}
-.btn-ghost:hover {
-  background-color: var(--color-surface-hover);
-  color: var(--color-text);
   border-color: var(--color-border-light);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, white 8%, transparent);
 }
+
+.btn-ghost:hover {
+  background-color: color-mix(in srgb, var(--color-surface-hover) 90%, transparent);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
 .btn-ghost:active {
   background-color: var(--color-primary-alpha-10);
+  box-shadow: var(--shadow-press);
 }
 
-/* Accent */
 .btn-accent {
   background-color: var(--color-accent);
-  color: var(--color-on-primary);
+  color: var(--color-on-accent);
   border-color: var(--color-accent);
-  box-shadow: var(--shadow-btn);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--color-accent) 32%, transparent);
 }
+
 .btn-accent:hover {
   background-color: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
-  box-shadow: var(--shadow-btn-hover);
+  box-shadow: 0 10px 22px color-mix(in srgb, var(--color-accent) 40%, transparent);
   transform: translateY(-1px);
 }
+
 .btn-accent:active {
   transform: translateY(0);
+  box-shadow: var(--shadow-press);
 }
 
-/* Danger — Corail organique */
 .btn-danger {
   background-color: var(--color-error);
-  color: #fff;
+  color: var(--color-on-error);
   border-color: var(--color-error);
   box-shadow: 0 4px 12px var(--color-error-alpha-15);
 }
+
 .btn-danger:hover {
-  background-color: var(--color-pop-hover);
-  border-color: var(--color-pop-hover);
+  background-color: var(--color-error-hover);
+  border-color: var(--color-error-hover);
   box-shadow: 0 8px 18px var(--color-error-alpha-15);
   transform: translateY(-1px);
 }
+
 .btn-danger:active {
   transform: translateY(0);
-  box-shadow: var(--shadow-xs);
+  box-shadow: var(--shadow-press);
 }
 
-/* Sizes */
 .btn-xs {
+  min-height: 36px;
   padding: var(--space-2xs) var(--space-sm);
   font-size: var(--text-xs);
   border-radius: var(--radius-sm);
 }
+
 .btn-sm {
+  min-height: 40px;
   padding: var(--space-xs) var(--space-md);
   font-size: var(--text-xs);
 }
+
 .btn-lg {
+  min-height: 52px;
   padding: var(--space-md) var(--space-xl);
   font-size: var(--text-base);
 }
+
 .btn-xl {
+  min-height: 56px;
   padding: var(--space-md) var(--space-2xl);
   font-size: var(--text-lg);
 }
 
-/* Shapes */
 .btn-icon {
   padding: var(--space-sm);
   border-radius: var(--radius-full);
   aspect-ratio: 1;
 }
+
 .btn-icon.btn-sm {
   padding: var(--space-xs);
 }
+
 .btn-icon.btn-lg {
   padding: var(--space-md);
 }
+
 .btn-pill {
   border-radius: var(--radius-full);
 }
+
 .btn-block {
   display: flex;
   width: 100%;
 }
 
-/* States */
 .btn:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
   box-shadow: var(--focus-ring);
 }
+
 .btn:disabled,
 .btn[aria-disabled="true"] {
   opacity: 0.5;
@@ -166,36 +188,63 @@
   transform: none;
   box-shadow: none;
 }
+
 .btn[aria-busy="true"] {
   position: relative;
   color: transparent;
   pointer-events: none;
 }
+
 .btn[aria-busy="true"]::after {
   content: "";
   position: absolute;
   width: 16px;
   height: 16px;
-  border: 2px solid var(--color-on-primary);
+  border: 2px solid currentColor;
   border-top-color: transparent;
   border-radius: var(--radius-full);
+  color: inherit;
   animation: spin 0.6s linear infinite;
 }
 
-/* Button Group */
+.btn-primary[aria-busy="true"],
+.btn-accent[aria-busy="true"],
+.btn-danger[aria-busy="true"] {
+  color: transparent;
+}
+
+.btn-primary[aria-busy="true"]::after {
+  border-color: var(--color-on-primary);
+  border-top-color: transparent;
+}
+
+.btn-accent[aria-busy="true"]::after {
+  border-color: var(--color-on-accent);
+  border-top-color: transparent;
+}
+
+.btn-danger[aria-busy="true"]::after {
+  border-color: var(--color-on-error);
+  border-top-color: transparent;
+}
+
 .btn-group {
   display: inline-flex;
   gap: 0;
 }
+
 .btn-group .btn {
   border-radius: 0;
 }
+
 .btn-group .btn:first-child {
   border-radius: var(--radius-btn) 0 0 var(--radius-btn);
 }
+
 .btn-group .btn:last-child {
   border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
 }
+
 .btn-group .btn + .btn {
   border-left: 0;
 }

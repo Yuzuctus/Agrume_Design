@@ -1,7 +1,12 @@
-/* ═══════════════════════════════════════════════════
-   ZEST — Base Styles
+/* ===================================================
+   YUZUCTUS - Base Styles
    Body, headings, links, code, selection, focus
-   ═══════════════════════════════════════════════════ */
+   =================================================== */
+
+html,
+body {
+  overflow-x: clip;
+}
 
 body {
   font-family: var(--font-body);
@@ -22,47 +27,74 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display);
-  font-weight: var(--weight-extrabold);
   line-height: var(--leading-tight);
   color: var(--color-text);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: var(--tracking-display);
+}
+
+h4,
+h5,
+h6 {
   letter-spacing: var(--tracking-tight);
 }
+
 h1 {
   font-size: var(--text-5xl);
+  font-weight: var(--weight-black);
 }
+
 h2 {
   font-size: var(--text-4xl);
+  font-weight: var(--weight-extrabold);
 }
+
 h3 {
   font-size: var(--text-3xl);
+  font-weight: var(--weight-extrabold);
 }
+
 h4 {
-  font-size: var(--text-2xl);
+  font-size: 1.5rem;
+  font-weight: var(--weight-bold);
 }
+
 h5 {
-  font-size: var(--text-xl);
+  font-size: 1.125rem;
+  font-weight: var(--weight-bold);
 }
+
 h6 {
-  font-size: var(--text-lg);
+  font-size: 1rem;
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
 }
 
 p {
   line-height: var(--leading-relaxed);
 }
 
+/* Links */
 a {
-  color: var(--color-primary);
+  color: var(--color-link);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
+
 a:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-link-hover);
 }
 
 strong,
 b {
   font-weight: var(--weight-bold);
 }
+
 small {
   font-size: var(--text-sm);
 }
@@ -74,12 +106,14 @@ samp {
   font-family: var(--font-mono);
   font-size: 0.9em;
 }
+
 code {
   background: var(--color-surface);
   padding: 0.15em 0.4em;
   border-radius: var(--radius-xs);
   border: var(--border-width) solid var(--color-border-light);
 }
+
 pre {
   background: var(--color-surface);
   padding: var(--space-md);
@@ -87,6 +121,7 @@ pre {
   border: var(--border-width) solid var(--color-border-light);
   overflow-x: auto;
 }
+
 pre code {
   background: none;
   padding: 0;
@@ -98,13 +133,33 @@ pre code {
   background: var(--color-primary);
   color: var(--color-on-primary);
 }
+
 ::placeholder {
   color: var(--color-text-dim);
   opacity: 1;
 }
+
 :focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+}
+
+.skip-link {
+  position: fixed;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  z-index: calc(var(--z-theme-toggle) + 1);
+  padding: var(--space-sm) var(--space-md);
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-140%);
+  transition: transform var(--transition-base);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
 }
 
 hr {
@@ -113,6 +168,7 @@ hr {
   background: var(--color-border-light);
   margin: var(--space-xl) 0;
 }
+
 blockquote {
   border-left: var(--border-extra) solid var(--color-primary);
   padding-left: var(--space-md);
@@ -120,7 +176,7 @@ blockquote {
   font-style: italic;
 }
 
-/* Background effects (DISABLED in Zest via style.css) */
+/* Background effects (disabled by entrypoints that need flatter surfaces) */
 body::before {
   content: "";
   position: fixed;
@@ -132,6 +188,7 @@ body::before {
     linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 40px 40px;
 }
+
 body::after {
   content: "";
   position: fixed;
@@ -143,6 +200,7 @@ body::after {
   z-index: 0;
   background: var(--bg-gradient);
 }
+
 body > * {
   position: relative;
   z-index: var(--z-base);

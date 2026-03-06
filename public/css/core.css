@@ -1,0 +1,46 @@
+/* YUZUCTUS - Core bundle */
+
+/* 1. Foundation */
+@import "tokens.css";
+@import "reset.css";
+@import "base.css";
+@import "animations.css";
+
+/* 2. Components (A-Z) */
+@import "components/accordion.css";
+@import "components/avatar.css";
+@import "components/back-to-top.css";
+@import "components/badges.css";
+@import "components/breadcrumbs.css";
+@import "components/buttons.css";
+@import "components/cards.css";
+@import "components/color-swatch.css";
+@import "components/drag-drop.css";
+@import "components/dropdown.css";
+@import "components/file-upload.css";
+@import "components/footer.css";
+@import "components/forms.css";
+@import "components/grid.css";
+@import "components/hero.css";
+@import "components/loader.css";
+@import "components/modal.css";
+@import "components/navbar.css";
+@import "components/notifications.css";
+@import "components/pagination.css";
+@import "components/range-slider.css";
+@import "components/rating.css";
+@import "components/scrollbar.css";
+@import "components/sections.css";
+@import "components/sidebar.css";
+@import "components/stepper.css";
+@import "components/tables.css";
+@import "components/tabs.css";
+@import "components/theme-toggle.css";
+@import "components/tooltips.css";
+
+/* 3. Themes */
+@import "themes/dark.css";
+@import "themes/light.css";
+
+/* 4. Utilities */
+@import "utilities.css";

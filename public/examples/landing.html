@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html lang="fr" data-theme="system" data-theme-resolved="dark" data-product-mode="social">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuzuctus Demo - Landing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css/showcase.css" />
+    <link rel="stylesheet" href="../css/fixes.css" />
+  </head>
+  <body class="demo-page" data-shell-nav="closed">
+    <a class="skip-link" href="#content">Aller au contenu principal</a>
+    <header class="demo-navbar">
+      <div class="demo-navbar-primary">
+        <button
+          class="shell-menu-button"
+          type="button"
+          data-shell-toggle="nav"
+          aria-controls="landingNav"
+          aria-expanded="false"
+          aria-label="Ouvrir la navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <a class="demo-brand" href="../styleguide.html"><span class="demo-brand-mark"></span>Yuzuctus</a>
+      </div>
+      <nav class="demo-nav" id="landingNav" aria-label="Navigation des demos" data-shell-panel="nav" tabindex="-1">
+        <div class="shell-drawer-head">
+          <div class="shell-drawer-brandline">Navigation des demos</div>
+          <button class="shell-drawer-close" type="button" data-shell-close aria-label="Fermer le menu">x</button>
+        </div>
+        <div class="demo-nav-links">
+          <a class="demo-nav-link" href="../styleguide.html">Guide</a>
+          <a class="demo-nav-link" aria-current="page" href="landing.html">Landing</a>
+          <a class="demo-nav-link" href="login.html">Connexion</a>
+          <a class="demo-nav-link" href="tool-dashboard.html">Tool</a>
+          <a class="demo-nav-link" href="library.html">Library</a>
+          <a class="demo-nav-link" href="../readme.html">README</a>
+        </div>
+        <div class="shell-drawer-meta">
+          <span class="demo-theme-state">Theme: <strong data-theme-state>system</strong></span>
+        </div>
+      </nav>
+      <div class="demo-navbar-actions"><span class="demo-theme-state">Theme: <strong id="themeState" data-theme-state>system</strong></span><button class="theme-toggle" id="themeToggle" type="button" aria-label="Theme system (dark)"><svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg><svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg></button></div>
+    </header>
+    <div class="shell-overlay" data-shell-overlay></div>
+
+    <main class="demo-main" id="content">
+      <section class="brand-shell page-hero">
+        <div class="page-hero-grid">
+          <div class="page-hero-copy">
+            <div class="hero-copy-intro">
+              <span class="eyebrow">Hub personnel / social landing</span>
+              <div class="hero-copy-block">
+                <h1>Une page d entree qui porte vraiment ton personnage.</h1>
+                <p>Cette version montre comment la DA peut vivre sur un site principal: hero fort, cartes bento, liens mis en avant et un ton plus personnel.</p>
+              </div>
+            </div>
+            <div class="hero-actions"><a class="btn btn-primary" href="#projects">Voir les projets</a><a class="btn btn-ghost" href="../styleguide.html">Retour a la charte</a></div>
+            <div class="hero-support-shell"><p class="hero-support-note">Le hero porte le personnage, puis le relais passe vite aux projets, aux liens et aux outils pour garder une lecture nette.</p><div class="metric-grid"><article class="metric-card"><span class="metric-value">4</span><div class="metric-label">Projects linked</div></article><article class="metric-card"><span class="metric-value">1</span><div class="metric-label">Identity system</div></article><article class="metric-card"><span class="metric-value">3</span><div class="metric-label">Character roles</div></article></div></div>
+          </div>
+          <div class="hero-signature-visual"><img class="character-portrait hero-portrait" src="../img/altver/Yuzu_Joa-ver-zoom.jpg" alt="Portrait de Yuzu" loading="eager" /></div>
+        </div>
+      </section>
+
+      <section class="demo-section" id="projects">
+        <div class="demo-section-head"><div><span class="eyebrow">Projects</span><h2>Liens et entrees principales</h2></div><p>Le layout reste doux et authored, mais les cartes restent assez utilitaires pour presenter du vrai contenu.</p></div>
+        <div class="bento-grid">
+          <article class="bento-card bento-card-wide bento-card-featured"><span class="quick-tag">Featured</span><h3>Skins library</h3><p>Explorer tes skins, favoris et tags avec une presentation plus editoriale.</p><div class="hero-actions"><a class="btn btn-primary btn-sm" href="library.html">Open preview</a><a class="btn btn-ghost btn-sm" href="#">Favourite sets</a></div></article>
+          <article class="bento-card bento-card-tall"><span class="quick-tag">Live links</span><div class="link-stack"><article class="link-card link-card-featured"><div class="link-card-identity"><strong>Twitch</strong><div class="link-card-meta">Hub live</div></div><p class="link-card-support">Streaming, archives et entree directe vers le contenu chaud.</p><div class="link-card-end"><span class="tag">Live</span><span class="link-card-action">Entrer</span></div></article><article class="link-card"><div class="link-card-identity"><strong>GitHub</strong><div class="link-card-meta">Open source</div></div><p class="link-card-support">Experiences, systemes partages et archives techniques.</p><div class="link-card-end"><span class="tag">Code</span><span class="link-card-action">Lire</span></div></article><article class="link-card"><div class="link-card-identity"><strong>Zest</strong><div class="link-card-meta">Micro tool</div></div><p class="link-card-support">Fast links, short URLs et actions rapides sans friction.</p><div class="link-card-end"><span class="tag">Tool</span><span class="link-card-action">Lancer</span></div></article></div></article>
+          <article class="bento-card bento-card-full"><div class="project-grid"><article class="project-card" data-product-mode="tool"><span class="asset-chip">Osurea</span><h3>Visualiseur d area</h3><p>Une structure plus dense, orientee resultat et data.</p></article><article class="project-card" data-product-mode="library"><span class="asset-chip">Skins</span><h3>Collection browse</h3><p>Catalogue avec filtres, cartes media et tags lisibles.</p></article><article class="project-card" data-product-mode="tool"><span class="asset-chip">Zest</span><h3>Shortener</h3><p>CTA rapide, resultats clairs, historique simple.</p></article></div></article>
+        </div>
+      </section>
+
+      <footer class="demo-footer"><span>Landing demo built from the shared Yuzuctus system.</span><a class="sg-backlink" href="../styleguide.html">Retour au guide</a></footer>
+    </main>
+
+    <div class="toast-container" id="toastContainer"></div>
+    <div class="sr-only" id="srAnnouncements" aria-live="polite" aria-atomic="true"></div>
+    <script src="../js/styleguide.js"></script>
+  </body>
+</html>

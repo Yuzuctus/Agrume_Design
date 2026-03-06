@@ -1,7 +1,7 @@
-/* ═══════════════════════════════════════════════════
-   ZEST — Tabs
-   .tabs + .tab + .tab-panel + pill + vertical
-   ═══════════════════════════════════════════════════ */
+/* ===================================================
+   YUZUCTUS - Tabs
+   tablist, tab, panel, pill, vertical
+   =================================================== */
 
 .tabs {
   display: flex;
@@ -11,13 +11,16 @@
   overflow-x: auto;
   scrollbar-width: none;
 }
+
 .tabs::-webkit-scrollbar {
   display: none;
 }
+
 .tab {
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);
+  min-height: 40px;
   padding: var(--space-sm) var(--space-lg);
   font-family: var(--font-body);
   font-size: var(--text-sm);
@@ -30,22 +33,33 @@
   white-space: nowrap;
   transition:
     color var(--transition-fast),
-    border-color var(--transition-fast);
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
   margin-bottom: -1px;
 }
+
 .tab:hover {
   color: var(--color-text);
 }
+
+.tab:focus-visible {
+  outline: none;
+  color: var(--color-text);
+  background-color: var(--color-primary-alpha-10);
+}
+
 .tab.active,
 .tab[aria-selected="true"] {
-  color: var(--color-primary);
+  color: var(--color-link);
   border-bottom-color: var(--color-primary);
   font-weight: var(--weight-semibold);
 }
+
 .tab:disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
+
 .tab svg {
   width: 16px;
   height: 16px;
@@ -55,13 +69,13 @@
   display: none;
   padding: var(--space-lg) 0;
 }
+
 .tab-panel.active,
 .tab-panel[data-active="true"] {
   display: block;
   animation: fadeIn 0.2s ease forwards;
 }
 
-/* Pill variant */
 .tabs-pill {
   border-bottom: none;
   gap: var(--space-xs);
@@ -69,24 +83,28 @@
   background-color: var(--color-surface);
   border-radius: var(--radius-btn);
 }
+
 .tabs-pill .tab {
   border-bottom: none;
   border-radius: var(--radius-btn);
   margin-bottom: 0;
   padding: var(--space-xs) var(--space-md);
 }
-.tabs-pill .tab.active {
+
+.tabs-pill .tab.active,
+.tabs-pill .tab[aria-selected="true"] {
   background-color: var(--color-primary);
   color: var(--color-on-primary);
 }
 
-/* Vertical */
 .tabs-vertical {
   flex-direction: column;
+  align-items: stretch;
   border-bottom: none;
   border-right: var(--border-width) solid var(--color-border-light);
   min-width: 180px;
 }
+
 .tabs-vertical .tab {
   border-bottom: none;
   border-right: 2px solid transparent;
@@ -95,13 +113,35 @@
   text-align: left;
   justify-content: flex-start;
 }
-.tabs-vertical .tab.active {
+
+.tabs-vertical .tab.active,
+.tabs-vertical .tab[aria-selected="true"] {
   border-right-color: var(--color-primary);
 }
+
 .tabs-layout {
   display: flex;
   gap: var(--space-lg);
 }
+
 .tabs-layout .tab-panel {
   flex: 1;
+}
+
+@media (max-width: 768px) {
+  .tabs-layout {
+    flex-direction: column;
+  }
+
+  .tabs-vertical {
+    min-width: 0;
+    border-right: none;
+    border-bottom: var(--border-width) solid var(--color-border-light);
+  }
+
+  .tabs-vertical .tab {
+    border-right: none;
+    border-bottom: 2px solid transparent;
+    margin-right: 0;
+  }
 }

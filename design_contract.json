@@ -1,0 +1,71 @@
+﻿{
+  "name": "Yuzuctus Shared Design Contract",
+  "version": "2.1",
+  "priority": [
+    "project_rebuild_reference",
+    "human_readable_design_charter",
+    "ai_readable_contract",
+    "technical_portfolio_demo"
+  ],
+  "umbrella_brand": "Yuzuctus",
+  "projects": [
+    {
+      "name": "yuzuctus.fr",
+      "archetype": "social_hub",
+      "accent_role": "blush_plus_mint",
+      "character_usage": ["portrait_hero", "signature_cards", "micro_sticker"]
+    },
+    {
+      "name": "osurea.yuzuctus.fr",
+      "archetype": "tool_dashboard",
+      "accent_role": "lagoon",
+      "character_usage": ["empty_state", "onboarding"]
+    },
+    {
+      "name": "skins.yuzuctus.fr",
+      "archetype": "library_catalog",
+      "accent_role": "gold",
+      "character_usage": ["hero_entry", "micro_sticker"]
+    },
+    {
+      "name": "zest.yuzuctus.fr",
+      "archetype": "tool_shortener",
+      "accent_role": "lagoon",
+      "character_usage": ["success_state", "empty_state"]
+    }
+  ],
+  "token_roles": {
+    "foundation": ["--color-bg", "--color-surface", "--color-bg-elevated", "--color-border-light"],
+    "ink": ["--color-ink", "--color-ink-muted", "--color-ink-primary", "--color-link"],
+    "decorative": ["--color-primary", "--color-secondary", "--color-accent", "--color-pop"]
+  },
+  "character_assets": {
+    "official_public_roles": ["portrait_hero", "mascot_empty_state", "micro_sticker"],
+    "forbidden_patterns": [
+      "character_everywhere",
+      "large_character_inside_dense_tool_surface",
+      "decorative_character_without_function"
+    ]
+  },
+  "style_rules": {
+    "must": [
+      "keep_shared_base_across_projects",
+      "use_ink_tokens_for_dense_text",
+      "use_soft_rounded_shells_and_clear_borders",
+      "prefer_authored_layouts_over_generic_templates"
+    ],
+    "must_not": [
+      "invent_new_palette_without_request",
+      "use_pastel_accent_as_small_text",
+      "drift_to_generic_saas_visual_language",
+      "overdecorate_with_random_gradients_or_shapes"
+    ]
+  },
+  "page_blueprints": ["landing", "login", "tool_dashboard", "library_catalog"],
+  "ai_output_requirements": [
+    "state_the_page_archetype_first",
+    "reuse_existing_tokens_and_components",
+    "keep_character_usage_explicit_and_limited",
+    "optimize_for_readability_before_decoration"
+  ]
+}

@@ -1,7 +1,7 @@
-/* ═══════════════════════════════════════════════════
-   ZEST — Utility Classes
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   YUZUCTUS â€” Utility Classes
    Layout, spacing, typography, colors, display, sizing
-   ═══════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 /* Layout */
 .container {
@@ -442,10 +442,19 @@
 
 /* Colors */
 .text-primary {
-  color: var(--color-primary);
+  color: var(--color-ink-primary);
+}
+.text-secondary {
+  color: var(--color-ink-secondary);
+}
+.text-pop {
+  color: var(--color-ink-pop);
 }
 .text-accent {
-  color: var(--color-accent);
+  color: var(--color-ink-accent);
+}
+.text-link {
+  color: var(--color-link);
 }
 .text-success {
   color: var(--color-success);
@@ -461,6 +470,15 @@
 }
 .text-dim {
   color: var(--color-text-dim);
+}
+.section-space-sm {
+  padding-block: var(--section-space-sm);
+}
+.section-space-md {
+  padding-block: var(--section-space-md);
+}
+.section-space-lg {
+  padding-block: var(--section-space-lg);
 }
 .bg-primary {
   background-color: var(--color-primary);
@@ -723,3 +741,5 @@
 .select-auto {
   user-select: auto;
 }
+
+

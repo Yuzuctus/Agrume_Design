@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html lang="fr" data-theme="system" data-theme-resolved="dark" data-product-mode="social">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuzuctus Demo - Connexion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css/showcase.css" />
+    <link rel="stylesheet" href="../css/fixes.css" />
+  </head>
+  <body class="demo-page" data-shell-nav="closed">
+    <a class="skip-link" href="#content">Aller au contenu principal</a>
+    <header class="demo-navbar">
+      <div class="demo-navbar-primary">
+        <button
+          class="shell-menu-button"
+          type="button"
+          data-shell-toggle="nav"
+          aria-controls="loginNav"
+          aria-expanded="false"
+          aria-label="Ouvrir la navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <a class="demo-brand" href="../styleguide.html"><span class="demo-brand-mark"></span>Yuzuctus</a>
+      </div>
+      <nav class="demo-nav" id="loginNav" aria-label="Navigation des demos" data-shell-panel="nav" tabindex="-1">
+        <div class="shell-drawer-head">
+          <div class="shell-drawer-brandline">Navigation des demos</div>
+          <button class="shell-drawer-close" type="button" data-shell-close aria-label="Fermer le menu">x</button>
+        </div>
+        <div class="demo-nav-links">
+          <a class="demo-nav-link" href="../styleguide.html">Guide</a>
+          <a class="demo-nav-link" href="landing.html">Landing</a>
+          <a class="demo-nav-link" aria-current="page" href="login.html">Connexion</a>
+          <a class="demo-nav-link" href="tool-dashboard.html">Tool</a>
+          <a class="demo-nav-link" href="library.html">Library</a>
+          <a class="demo-nav-link" href="../readme.html">README</a>
+        </div>
+        <div class="shell-drawer-meta">
+          <span class="demo-theme-state">Theme: <strong data-theme-state>system</strong></span>
+        </div>
+      </nav>
+      <div class="demo-navbar-actions"><span class="demo-theme-state">Theme: <strong id="themeState" data-theme-state>system</strong></span><button class="theme-toggle" id="themeToggle" type="button" aria-label="Theme system (dark)"><svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg><svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg></button></div>
+    </header>
+    <div class="shell-overlay" data-shell-overlay></div>
+
+    <main class="demo-main" id="content">
+      <section class="auth-layout">
+        <article class="auth-visual brand-shell"><div class="auth-visual-copy"><span class="eyebrow">Connexion partagee</span><h1>Une page auth qui reste dans ton univers.</h1><p>L auth n a pas besoin d etre froide. Elle peut etre nette, simple, et garder juste assez de personnalite pour appartenir a Yuzuctus.</p><ul class="benefit-list"><li>Surface lisible et calme</li><li>Une seule illustration forte</li><li>Feedback et CTA tres clairs</li></ul><img class="character-mascot" src="../img/yuzuchibi_nobg.png" alt="Mascotte Yuzu sur une page de connexion" loading="eager" /></div></article>
+        <article class="auth-card"><span class="eyebrow">Account access</span><div><h2>Connecte toi</h2><p class="text-muted">Utilise ton compte pour acceder a tes outils, favoris et raccourcis.</p></div><label class="form-group"><span class="form-label form-label-required">Email</span><input class="form-input" type="email" placeholder="yuzu@example.com" /></label><label class="form-group"><span class="form-label">Mot de passe</span><input class="form-input" type="password" placeholder="********" /></label><div class="hero-actions"><button class="btn btn-primary" type="button">Se connecter</button><button class="btn btn-ghost" type="button">Magic link</button></div><div class="alert alert-info"><div><div class="alert-title">Suggestion de style</div>Sur les pages auth, garde le personnage sur le cote et laisse le formulaire tres sobre.</div></div></article>
+      </section>
+      <footer class="demo-footer"><span>Auth demo using the shared system without inventing a separate theme.</span><a class="sg-backlink" href="../styleguide.html">Retour au guide</a></footer>
+    </main>
+
+    <div class="toast-container" id="toastContainer"></div>
+    <div class="sr-only" id="srAnnouncements" aria-live="polite" aria-atomic="true"></div>
+    <script src="../js/styleguide.js"></script>
+  </body>
+</html>

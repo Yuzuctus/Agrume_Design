@@ -1,8 +1,9 @@
 /* ===================================================
-   AGRUME - Light Theme Adjustments
+   YUZUCTUS - Light Theme Adjustments
    =================================================== */
 
-[data-theme="light"] {
+[data-theme="light"],
+[data-theme="system"][data-theme-resolved="light"] {
   .card {
     background-color: var(--color-surface);
     box-shadow: var(--shadow-card);
@@ -18,36 +19,13 @@
   }
 
   .hero-blob {
-    opacity: 0.24;
+    opacity: 0.18;
     filter: blur(80px);
-  }
-
-  .btn-primary:active,
-  .btn-secondary:active {
-    box-shadow: var(--shadow-sm);
-    transform: translateY(1px);
-  }
-
-  .btn-danger {
-    background-color: var(--color-error);
-    border-color: var(--color-error);
-  }
-
-  .btn-danger:hover {
-    background-color: var(--color-pop-hover);
-    border-color: var(--color-pop-hover);
-    filter: none;
   }
 
   .table th {
     background-color: var(--color-bg-alt);
     color: var(--color-text-muted);
-  }
-
-  .form-input:focus,
-  .form-textarea:focus,
-  .form-select:focus {
-    box-shadow: var(--focus-ring), 0 0 0 4px var(--color-primary-alpha-10);
   }
 
   code,
@@ -68,10 +46,7 @@
     box-shadow: var(--shadow-card-hover);
   }
 
-  .sidebar {
-    background-color: var(--color-bg-alt);
-  }
-
+  .sidebar,
   .sg-sidebar {
     background-color: var(--color-bg-alt);
   }

@@ -1,7 +1,7 @@
-/* ═══════════════════════════════════════════════════
-   ZEST — Range Slider (NEW)
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   YUZUCTUS â€” Range Slider (NEW)
    Filled track via JS-driven linear-gradient
-   ═══════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
 .range-slider {
   display: flex;
@@ -14,7 +14,7 @@
   appearance: none;
   width: 100%;
   height: 6px;
-  /* Default: filled up to 50% — JS will update --slider-fill */
+  /* Default: filled up to 50% â€” JS will update --slider-fill */
   background: linear-gradient(
     to right,
     var(--color-primary) 0%,
@@ -118,3 +118,4 @@
 .range-slider-accent .range-slider-value {
   color: var(--color-accent);
 }
+
